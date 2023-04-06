@@ -1,0 +1,98 @@
+.footer
+	position: relative
+	color: $colorWhite
+	background-color: $colorBlack
+	padding: 128px 0 64px 0
+	@media (max-width : $bpExtraLarge)
+		padding: 96px 0 48px 0
+	@media (max-width : $bpLarge)
+		padding: 48px 0
+
+	&__about
+		@media (max-width : $bpExtraLarge)
+			display: none
+	&__contacts-desktop
+		@media (max-width : $bpLarge)
+			display: none
+	&__contacts-mobile
+		display: none
+		@media (max-width : $bpLarge)
+			display: block
+
+	&__title
+		text-transform: uppercase
+		margin-bottom: 24px
+		@media (max-width : $bpExtraLarge)
+			margin-bottom: 20px
+		@media (max-width : $bpLarge)
+			font-weight: 600 !important
+
+	&__text
+		@media (max-width : $bpExtraLarge)
+			margin-right: 40px
+
+	&__menu
+		font-size: 14px
+		line-height: 20px
+		text-transform: uppercase
+		margin-bottom: 20px
+		@media (max-width: $bpExtraExtraLarge)
+			font-size: 12px
+		@media (max-width: $bpExtraLarge)
+			font-size: 11px
+			margin-bottom: 16px
+		@media (max-width : $bpLarge)
+			margin-bottom: 12px
+			line-height: 16px
+	&__link
+		display: inline-block
+		vertical-align: top
+		margin-bottom: 8px
+		color: $colorWhite
+		@media (hover: hover)
+			&:hover
+				color: rgba($colorWhite, .5)
+
+	&__contacts
+		font:
+			size: 14px
+			weight: 600
+		line-height: 20px
+		text-transform: uppercase
+		@media (max-width: $bpExtraExtraLarge)
+			font-size: 12px
+		@media (max-width: $bpExtraLarge)
+			font-size: 11px
+	&__contact
+		margin-bottom: 8px
+		span
+			font-weight: 300
+
+	&__bottom
+		margin-top: 20px
+		font-size: 14px
+		line-height: 20px
+	&__copyright
+		margin-right: 24px
+		font-weight: 600
+		@media (max-width : $bpSmall)
+			margin: 0 0 8px 0
+			display: block
+	&__privacy,
+	&__terms-and-conditions
+		color: $colorWhite
+		margin-right: 24px
+		@media (hover: hover)
+			&:hover
+				color: rgba($colorWhite, .5)
+
+	&__networks
+		@media (max-width : $bpLarge)
+			margin: 24px 0 44px 0
+		&_desktop
+			@media (max-width : $bpLarge)
+				display: none
+		&_mobile
+			display: none
+			@media (max-width : $bpLarge)
+				display: block

@@ -1,0 +1,455 @@
+.c-header
+	margin: 152px 0 80px 0
+	color: $colorWhite
+	@media (max-width: $bpLarge)
+		margin: 20px 0 48px 0
+	&_13,
+	&_16,
+	&_18
+		color: $colorBlack
+	&__bg
+		background:
+			position: center center
+			repeat: no-repeat
+			size: cover
+		text-transform: uppercase
+		position: relative
+		padding-top: 40%
+		@media (max-width: $bpSmall)
+			height: auto
+			padding-top: 100%
+	&__content
+		position: absolute
+		bottom: 112px
+		left: 0
+		right: 0
+		@media (max-width: $bpExtraExtraLarge)
+			bottom: 80px
+		@media (max-width: $bpLarge)
+			left: 24px
+			right: 24px
+			bottom: 60px
+		@media (max-width: $bpSmall)
+			left: 20px
+			right: 20px
+			bottom: 40px
+	&__title
+		margin-bottom: 32px
+		@media (max-width: $bpSmall)
+			word-break: break-word
+			br
+				display: none
+
+.c-footer
+	margin: 140px 0
+	@media (max-width: $bpLarge)
+		margin: 48px 0
+	&__img-product-1,
+	&__img-product-2
+		padding-top: 78%
+		background:
+			position: center center
+			repeat: no-repeat
+			size: contain
+		@media (max-width: $bpLarge)
+			margin-bottom: 32px
+	&__img-product-2
+		@media (max-width: $bpExtraLarge)
+			display: none
+	&__img-product
+		padding-top: 50%
+	&__text
+		text-transform: uppercase
+		margin-bottom: 32px
+	&__btns
+		&_center
+			text-align: center
+	&__btn
+		display: inline-block
+		vertical-align: top
+		margin-right: 12px
+		&_product
+			border-radius: 24px
+			box-shadow: 0 0 0 3px $colorWhite, 0 0 0 4px $colorBlack
+			margin:
+				top: 4px
+				right: 0
+
+.c-fz1
+	font:
+		size: 56px
+		weight: 600
+	line-height: 120%
+	@media (max-width: $bpExtraExtraLarge)
+		font-size: 48px
+	@media (max-width: $bpLarge)
+		font-size: 40px
+	@media (max-width: $bpSmall)
+		font-size: 28px
+.c-fz2
+	font:
+		size: 48px
+		weight: 600
+	line-height: 120%
+	@media (max-width: $bpExtraExtraLarge)
+		font-size: 36px
+	@media (max-width: $bpLarge)
+		font-size: 32px
+	@media (max-width: $bpSmall)
+		font-size: 26px
+.c-fz3
+	font:
+		size: 36px
+		weight: 300
+	line-height: 140%
+	@media (max-width: $bpExtraExtraLarge)
+		font-size: 28px
+	@media (max-width: $bpLarge)
+		font-size: 24px
+	@media (max-width: $bpSmall)
+		font-size: 18px
+.c-fz4
+	font:
+		size: 16px
+		weight: 300
+	line-height: 140%
+	@media (max-width: $bpExtraExtraLarge)
+		font-size: 14px
+	@media (max-width: $bpSmall)
+		font-size: 12px
+.c-fz5
+	font:
+		size: 14px
+		weight: 300
+	line-height: 170%
+	@media (max-width: $bpExtraExtraLarge)
+		font-size: 12px
+	@media (max-width: $bpSmall)
+		font-size: 10px
+
+.c-section
+	margin: 80px 0
+	text-transform: uppercase
+	overflow: hidden
+	@media (max-width: $bpLarge)
+		margin: 60px 0
+
+.c-mb1
+	margin-bottom: 60px
+	@media (max-width: $bpLarge)
+		margin-bottom: 32px
+.c-mt1
+	margin-top: 60px
+	@media (max-width: $bpLarge)
+		margin-top: 32px
+.c-mb2
+	margin-bottom: 36px
+	@media (max-width: $bpLarge)
+		margin-bottom: 20px
+.c-mt2
+	margin-top: 36px
+	@media (max-width: $bpLarge)
+		margin-top: 20px
+
+.c-img
+	background:
+		position: center center
+		repeat: no-repeat
+		size: cover
+.c-img-contain
+	background:
+		position: center center
+		repeat: no-repeat
+		size: contain
+.c-img-panorama
+	padding-top: 31.25%
+	@media (max-width: $bpLarge)
+		padding-top: 100%
+
+.c-img-bg
+	position: relative
+	&_left
+		@media (max-width: $bpLarge)
+			margin-bottom: 32px
+		.c-img-contain
+			position: absolute
+			top: 0
+			left: -1200px
+			right: 10px
+			bottom: 0
+			background-position: right center
+			@media (max-width: $bpLarge)
+				position: relative
+				left: 0
+				right: 0
+				padding-top: 58.25%
+				background:
+					size: cover
+					position: center center
+	&_right
+		@media (max-width: $bpLarge)
+			margin-top: 32px
+		.c-img-contain
+			position: absolute
+			top: 0
+			left: 10px
+			right: -1200px
+			bottom: 0
+			background-position: left center
+			@media (max-width: $bpLarge)
+				position: relative
+				left: 0
+				right: 0
+				padding-top: 58.25%
+				background:
+					size: cover
+					position: center center
+
+.c-flex-bottom
+	height: 100%
+	display: flex
+	align-items: flex-end
+	@media (max-width: $bpLarge)
+		height: auto
+		display: block
+		margin-top: 28px
+
+.c7-1,
+.c10-1,
+.c13-1
+	&__title
+		text-align: center
+	&__img
+		padding-top: 88%
+.c8-1,
+.c9-1,
+.c11-1
+	&__title
+		text-align: center
+.c8-1
+	&__img
+		height: 100%
+		@media (max-width: $bpExtraExtraLarge)
+			height: auto
+			padding-top: 88%
+.c9-1
+	&__img
+		padding-top: 58.25%
+.c14-1,
+.c16-1,
+.c17-1,
+.c18-1
+	&__title
+		text-align: center
+	&__img
+		padding-top: 58.25%
+
+.c7-2,
+.c8-2
+	&__img-1
+		padding-top: 122%
+	&__img-2
+		padding-top: 70%
+.c9-2,
+.c11-2,
+.c12-2
+	&__img-1
+		padding-top: 50%
+		@media (max-width: $bpLarge)
+			padding-top: 58.25%
+.c10-2
+	&__img-1
+		padding-top: 58.25%
+	&__img-2
+		padding-top: 88%
+		@media (max-width: $bpLarge)
+			padding-top: 58.25%
+.c11-2
+	&__img-2,
+	&__img-3
+		padding-top: 120%
+		@media (max-width: $bpLarge)
+			padding-top: 58.25%
+.c12-2
+	&__img-1
+		padding-top: 88%
+	&__img-3
+		padding-top: 124%
+.c13-2
+	&__img-1
+		padding-top: 124%
+		@media (max-width: $bpLarge)
+			padding-top: 58.25%
+	&__img-2
+		padding-top: 58.25%
+.c14-2
+	&__img-1
+		padding-top: 58.25%
+	&__img-2
+		padding-top: 58.25%
+
+.c7-4,
+.c8-4,
+.c9-4,
+.c10-4,
+.c11-4
+	&__img-1,
+	&__img-2,
+	&__img
+		padding-top: 58.25%
+
+.c12-4
+	&__img-1
+		padding-top: 58.25%
+	&__img-2
+		padding-top: 124%
+	&__img-3
+		padding-top: 88%
+
+.c7-5
+	&__img-1
+		padding-top: 120%
+		@media (max-width: $bpExtraExtraLarge)
+			padding-top: 107%
+	&__img-2
+		padding-top: 70%
+
+.c13-4
+	&__img-1
+		padding-top: 120%
+		@media (max-width: $bpLarge)
+			padding-top: 58.25%
+	&__img-2
+		padding-top: 58.25%
+
+.c14-4
+	&__img-1,
+	&__img-2
+		padding-top: 120%
+		@media (max-width: $bpLarge)
+			padding-top: 58.25%
+	&__img-3
+		padding-top: 58.25%
+
+.c15-1
+	&__img-1
+		padding-top: 120%
+	&__img-2
+		padding-top: 75%
+.c15-2
+	&__img-2
+		padding-top: 80%
+.c15-4
+	&__img
+		padding-top: 80%
+	&__btn
+		background-color: #2B66A2 !important
+
+.c16-2
+	&__img
+		padding-top: 120%
+.c17-2
+	&__img-1
+		padding-top: 58.25%
+	&__img-2-3
+		padding-top: 120%
+.c16-4
+	&__img-1
+		padding-top: 120%
+	&__img,
+	&__img-2
+		padding-top: 58.25%
+.c17-4
+	&__img-1
+		padding-top: 70%
+	&__img-2
+		padding-top: 58.25%
+
+.c18-2
+	&__img-1
+		padding-top: 115%
+	&__img-3
+		padding-top: 140%
+.c18-4
+	&__img
+		padding-top: 142%
+
+.c19-1
+	&__title
+		text-align: center
+	&__img
+		padding-top: 70%
+.c19-2
+	&__img-1
+		padding-top: 58.25%
+	&__img-2,
+	&__img-3-4
+		padding-top: 120%
+.c19-4
+	&__img-1
+		padding-top: 70%
+	&__img-2
+		padding-top: 58.25%
+
+.c20-1
+	&__title
+		text-align: center
+.c20-2
+	&__img-1
+		padding-top: 58.25%
+	&__img-2
+		padding-top: 120%
+.c20-4
+	&__img-1
+		padding-top: 88%
+	&__img-2
+		padding-top: 58.25%
+
+.c21-1
+	&__title
+		text-align: center
+	&__img
+		padding-top: 113%
+.c21-2
+	&__img-1,
+	&__img-2
+		padding-top: 58.25%
+.c21-4
+	&__img-1,
+	&__img-3
+		padding-top: 58.25%
+	&__img-2
+		padding-top: 120%
+
+.c22-1
+	&__title
+		text-align: center
+	&__img
+		padding-top: 88%
+.c22-2
+	&__img-1
+		padding-top: 58.25%
+	&__img-2,
+	&__img-3
+		padding-top: 120%
+.c22-4
+	&__img-1
+		padding-top: 88%
+	&__img-2
+		padding-top: 58.25%
+
+.c23-1
+	&__title
+		text-align: center
+	&__img
+		padding-top: 75%
+.c23-2
+	&__img-1
+		padding-top: 58.25%
+	&__img-2
+		padding-top: 78%
+	&__img-3,
+	&__img-5
+		padding-top: 70%
+	&__img-4
+		padding-top: 134%

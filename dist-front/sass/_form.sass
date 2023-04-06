@@ -1,0 +1,79 @@
+.btn
+	display: inline-block
+	vertical-align: top
+	outline: none
+	border: none
+		radius: 24px
+	color: $colorWhite
+	background-color: $colorPink
+	padding: 12px 24px
+	text-align: center
+	text-transform: uppercase
+	cursor: pointer
+	font:
+		family: $font
+		size: 16px
+		weight: 300
+	line-height: 24px
+	transition: .25s
+	@media (max-width : $bpLarge)
+		font-size: 14px
+		line-height: 20px
+		border-radius: 22px
+	@media (hover: hover)
+		&:hover
+			opacity: 1
+			background-color: $colorWhite
+			box-shadow: inset 0 0 0 1px $colorBlack
+			color: rgba($colorBlack, .6)
+	&_disable
+		background-color: $colorGreyMiddle
+		cursor: default
+	&_white
+		background-color: $colorWhite
+		color: $colorBlack
+	&_black
+		background-color: $colorBlack
+		color: $colorWhite
+	&_empty-invert
+		color: $colorWhite
+		box-shadow: inset 0 0 0 1px $colorWhite
+		background-color: transparent
+		@media (hover: hover)
+			&:hover
+				color: rgba($colorWhite, .6)
+				box-shadow: inset 0 0 0 1px $colorWhite
+				background-color: transparent
+	&_empty
+		color: $colorBlack
+		box-shadow: inset 0 0 0 1px $colorBlack
+		background-color: transparent
+		@media (hover: hover)
+			&:hover
+				color: $colorWhite
+				background-color: $colorPink
+				box-shadow: inset 0 0 0 1px $colorPink
+
+
+.checkbox-toggle
+	vertical-align: middle
+	display: inline-flex
+	cursor: pointer
+	border-radius: 9999px
+	outline: none
+	&.bg-blue-400
+		background-color: $colorGreyLight
+		b
+			background-color: #ECF1F7
+	&.bg-gray-400
+		background-color: $colorWhite
+		b
+			background-color: $colorBlack
+	&__input
+		width: 1px
+		position: absolute
+		opacity: 0
+		height: 1px
+	b
+		border-radius: 9999px
+		font-weight: bolder

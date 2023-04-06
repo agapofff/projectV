@@ -1,0 +1,100 @@
+.language-translations
+	&__category-link
+		text-align: left
+		text-decoration: none !important
+		line-height: 42px
+
+.translations-category-form
+	display: inline-block
+	vertical-align: top
+
+.translations-category
+	&__row
+		padding-left: 60px
+		position: relative
+		min-height: 40px
+		display: table
+		width: 100%
+		overflow: hidden
+		border-radius: 4px
+	&__number,
+	&__btn-message-delete,
+	&__date-message-relevant
+		width: 52px
+	&__number
+		position: absolute
+		top: 0
+		left: 0
+		padding: 8px
+		line-height: 24px
+	&__from,
+	&__to
+		position: relative
+		width: 50%
+		display: table-cell
+		margin-left: 2px
+		box-shadow: -2px 0 0 $colorLight
+	&__message,
+	&__form
+		display: block
+		width: 100%
+		padding: 8px
+		color: $colorBlack
+		background-color: $colorWhite
+		font:
+			family: $font
+			size: 16px
+			weight: 300
+		line-height: 24px
+		border: none
+		min-height: 64px
+		&.active
+			cursor: pointer
+		&.empty
+			position: absolute
+			top: 0
+			left: 0
+			right: 0
+			bottom: 0
+	&__form
+		outline: none
+		box-shadow: inset 0 0 0 2px $colorBlack
+	&__updated-at
+		position: absolute
+		bottom: 2px
+		left: 8px
+		z-index: 2
+		font-size: 8px
+		line-height: 8px
+	&__form-locale
+		select
+			width: 100%
+			height: 40px
+			padding: 6px
+			color: $colorWhite
+			background-color: $colorSecondary
+			border: none
+	&__btn-message-delete
+		position: absolute
+		bottom: 20px
+		left: 8px
+		z-index: 2
+		cursor: pointer
+		font-size: 12px
+		line-height: 12px
+		i
+			height: 12px
+			line-height: 12px
+			display: inline-block
+			vertical-align: top
+			transition: opacity .4s
+			text-align: center
+			&:hover
+				opacity: 1
+	&__date-message-relevant
+		font-size: 8px
+		line-height: 8px
+		position: absolute
+		left: 8px
+		bottom: 2px
+		z-index: 2

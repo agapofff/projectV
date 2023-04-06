@@ -1,0 +1,193 @@
+.product-item
+	margin-bottom: 48px
+
+	&__media
+		position: relative
+		padding-top: 80%
+		background-color: $colorGreyLight
+		&:hover
+			.product-item
+				&__properties
+					opacity: 1
+	&__img
+		position: absolute
+		top: 64px
+		left: 64px
+		right: 64px
+		bottom: 64px
+		z-index: 1
+		background:
+			size: contain
+			position: center center
+			repeat: no-repeat
+		@media (max-width : $bpExtraExtraLarge)
+			top: 48px
+			left: 48px
+			right: 48px
+			bottom: 48px
+		@media (max-width : $bpExtraExtraLarge)
+			top: 32px
+			left: 32px
+			right: 32px
+			bottom: 32px
+	&__properties
+		position: absolute
+		top: 0
+		left: 0
+		right: 0
+		bottom: 0
+		z-index: 2
+		opacity: 0
+		transition: opacity .25s
+		text-transform: uppercase
+		color: $colorWhite
+		background-color: rgba($colorBlack, .8)
+		padding: 32px 48px
+		text-align: center
+		@media (max-width : $bpExtraExtraLarge)
+			padding: 24px 32px
+		&:hover
+			z-index: 5
+	&__property-title-link
+		color: $colorWhite
+		text-decoration: underline
+		&:hover
+			text-decoration: none
+	&__property-title,
+	&__property-list
+		text-align: left
+	&__property-title,
+	&__property-list,
+	&__link
+		margin: 8px 0
+	&__property-item
+		position: relative
+		margin: 4px 0
+		padding-left: 16px
+		&:before
+			content: ''
+			position: absolute
+			top: 7px
+			left: 0
+			width: 6px
+			height: 6px
+			border-radius: 100%
+			background-color: $colorPink
+	&__link
+		display: inline-block
+		vertical-align: top
+
+
+	&__info
+		position: relative
+		margin-top: 12px
+	&__price
+		line-height: 40px
+		@media (max-width : $bpLarge)
+			line-height: 36px
+	&__title
+		display: inline-block
+		vertical-align: top
+		text-transform: uppercase
+
+	&__product-add-to-cart
+		position: absolute
+		top: 0
+		right: 0
+
+
+
+
+.product-add-to-cart
+	font-size: 0
+	white-space: nowrap
+	color: $colorWhite
+	&_zero
+		.product-add-to-cart
+			&__value
+				cursor: pointer
+				font-size: 0
+				background:
+					image: url('../img/icon__cart.svg?v=1')
+					size: 50%
+				@media (hover: hover)
+					&:hover
+						transform: scale(1.2)
+			&__minus,
+			&__plus
+				width: 0
+				opacity: 0
+	&__value,
+	&__minus,
+	&__plus
+		display: inline-block
+		vertical-align: top
+		transition: .25s
+		text-align: center
+	&__value
+		background-color: $colorGreyMiddle
+		width: 40px
+		height: 40px
+		line-height: 40px
+		font:
+			size: 20px
+			weight: 300
+			family: $font
+		background:
+			size: 0
+			position: 50% 50%
+			repeat: no-repeat
+		outline: none
+		border: none
+			radius: 100%
+		text-align: center
+		@media (max-width : $bpLarge)
+			min-width: 36px
+			height: 36px
+			line-height: 36px
+			font-size: 18px
+	&__minus,
+	&__plus
+		width: 40px
+		height: 40px
+		cursor: pointer
+		position: relative
+		@media (max-width : $bpLarge)
+			width: 36px
+			height: 36px
+		&::before,
+		&::after
+			content: ''
+			position: absolute
+			top: 50%
+			left: 50%
+			display: block
+			background-color: $colorBlack
+			opacity: 1
+			transition: opacity .25s
+		&::before
+			width: 2px
+			height: 10px
+			margin: -5px -1px
+		&::after
+			width: 10px
+			height: 2px
+			margin: -1px -5px
+		@media (hover: hover)
+			&:hover
+				&::before,
+				&::after
+					opacity: .5
+	&__minus
+		&::before
+			display: none
+
+
+
+
+.price
+	white-space: nowrap
+	&__value,
+	&__currency
+		display: inline-block
+		vertical-align: top

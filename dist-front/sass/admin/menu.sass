@@ -1,0 +1,107 @@
+@import "color"
+@import "font"
+
+
+.admin-panel
+	position: fixed
+	left: 0
+	right: 0
+	top: -40px
+	z-index: 99999
+	overflow: hidden
+	height: 45px
+	border-bottom: 5px solid #fff
+	transition: top .5s
+	@media (hover: hover)
+		&:hover
+			top: 0
+	@media only screen and (max-width : 991px)
+		top: auto
+		bottom: 0
+		height: 40px
+		border: none
+		@media (hover: hover)
+			&:hover
+				top: auto
+
+.admin-menu
+	background-color: rgba($colorBlack, .5)
+	line-height: 14px
+	padding: 0
+	font:
+		size: 14px
+		family: $font
+	position: relative
+	z-index: 9999
+	overflow-x: scroll
+	white-space: normal
+	height: 60px
+	@media only screen and (max-width : 768px)
+		white-space: nowrap
+	li
+		display: inline-block
+		vertical-align: top
+		&.active
+			background-color: rgba($colorBlack, .25)
+		&.settings
+			float: right
+			@media only screen and (max-width : 768px)
+				float: none
+		a
+			color: $colorWhite
+			display: block
+			text-decoration: none
+			padding: 15px
+			@media (hover: hover)
+				&:hover
+					background-color: rgba($colorWhite, .1)
+			.active
+				background-color: rgba($colorBlack, .25)
+			.fa
+				color: $colorWhite
+
+.translator-info
+	position: fixed
+	right: 30px
+	bottom: 30px
+	z-index: 99999
+	width: 60px
+	height: 60px
+	text-align: center
+	font-size: 20px
+	line-height: 60px
+	border-radius: 100%
+	background-color: #dc3545
+	color: #fff
+	box-shadow: 0 0 0 2px #fff, 0 0 0 7px #dc3545, 0 0 30px 7px rgba(#000, .25)
+	transition: .5s
+	@media (hover: hover)
+		&:hover
+			background-color: #fff
+			color: #dc3545
+			box-shadow: 0 0 0 2px #dc3545, 0 0 0 7px #fff, 0 0 30px 7px rgba(#000, .25)
+
+
+.admin-info
+	position: fixed
+	bottom: 10px
+	left: 10px
+	z-index: 999
+	@media only screen and (max-width : 768px)
+		bottom: 50px
+	&__item
+		margin: 1px
+		padding: 5px
+		background: $colorRed
+		color: $colorWhite
+		font-size: 12px
+		line-height: 16px
+		@media only screen and (max-width : 768px)
+			padding: 3px 5px
+			font-size: 10px
+			line-height: 14px
+	&__value
+		float: right
+		padding-left: 15px
+		@media only screen and (max-width : 768px)
+			padding-left: 10px

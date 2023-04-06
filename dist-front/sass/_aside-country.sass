@@ -1,0 +1,117 @@
+.aside-country
+	position: fixed
+	top: 0
+	right: -375px
+	z-index: 9999
+	padding: 0
+	width: 375px
+	height: 100%
+	overflow-y: auto
+	background: $colorWhite
+	transition: .25s
+	@media (max-width : $bpLarge)
+		top: 56px
+		padding-bottom: 56px
+		right: -100%
+		width: 100%
+		transition: right 0s
+		border-top: 1px solid $colorGreyLight
+	&.active
+		right: 0
+		box-shadow: -8px 0 20px rgba($colorBlack, .05)
+		@media (max-width : $bpLarge)
+			box-shadow: none
+
+	&__hr
+		background-color: $colorGreyLight
+		height: 1px
+
+	&__current
+		padding: 32px 48px
+		font-size: 14px
+		line-height: 20px
+		text-transform: uppercase
+		position: relative
+		box-shadow: inset 0 -1px 0 0 $colorGreyLight
+		@media (max-width : $bpLarge)
+			padding: 18px 24px
+
+	&__list
+		margin: 12px 48px 12px 0
+		padding: 0 0 0 48px
+		list-style: none
+		overflow: hidden
+		@media (max-width : $bpLarge)
+			margin: 2px 0 32px 0
+			padding: 0 24px
+	&__item
+		margin: 20px 0
+		font-size: 14px
+		line-height: 20px
+		text-transform: uppercase
+		position: relative
+		@media (max-width : $bpLarge)
+			margin: 16px 0
+
+	&__title
+		display: inline-block
+		vertical-align: top
+		padding-left: 36px
+		position: relative
+		color: $colorBlack
+
+	&__flag
+		position: absolute
+		top: 0
+		left: 0
+
+
+@mixin flag-bg($countries, $country, $row)
+	$index: index($countries, $country)
+	&_#{$country}
+		background-position: -#{($index - 1) * 20}px -#{($row - 1) * 20}px
+
+$countries1: (au, ca, il, jp, mx, nz, no, ch, us)
+$countries2: (ru, by, ua)
+$countries3: (kz, uz, kg, tm, iq, ae)
+$countries4: (am, ge, az)
+$countries5: (sp, md)
+$countries6: (at, be, bg, hr, cy, cz, dk, ee, fi, fr, gr, de, hu, ie, it, lv, lt, lu, mt, nl, pl, pt, ro, sk, si, es, se, gb)
+$countries7: (in)
+$countries8: (cn, hk, tw, vn)
+
+.flag
+	width: 20px
+	height: 20px
+	border-radius: 100%
+	background:
+		image: url('../img/flags.svg?v=7')
+		position: 0 18px
+		repeat: no-repeat
+		size: 580px 160px
+		color: $colorWhite
+	overflow: hidden
+
+	@each $country in $countries1
+		@include flag-bg($countries1, $country, 1)
+
+	@each $country in $countries2
+		@include flag-bg($countries2, $country, 2)
+
+	@each $country in $countries3
+		@include flag-bg($countries3, $country, 3)
+
+	@each $country in $countries4
+		@include flag-bg($countries4, $country, 4)
+
+	@each $country in $countries5
+		@include flag-bg($countries5, $country, 5)
+
+	@each $country in $countries6
+		@include flag-bg($countries6, $country, 6)
+
+	@each $country in $countries7
+		@include flag-bg($countries7, $country, 7)
+
+	@each $country in $countries8
+		@include flag-bg($countries8, $country, 8)

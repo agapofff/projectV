@@ -1,0 +1,130 @@
+.team
+	position: relative
+	padding: 152px 0 140px 0
+	background-color: $colorGreyLight
+	overflow: hidden
+	@media (max-width : $bpLarge)
+		padding: 60px 0
+
+	&__at-office
+		margin-top: 64px
+		img
+			display: block
+			width: 100%
+	&__at-team
+		margin-top: 64px
+		padding-top: 50%
+		background:
+			size: cover
+			position: top center
+			repeat: no-repeat
+
+	&__title
+		text-transform: uppercase
+		margin-bottom: -60px
+		@media (max-width : $bpExtraExtraLarge)
+			margin-bottom: -32px
+		@media (max-width : $bpLarge)
+			margin-bottom: 24px
+	&__list
+		display: flex
+		justify-content: space-between
+		align-items: flex-end
+		margin: 0 -22px
+		text-align: center
+		@media (max-width : $bpExtraExtraLarge)
+			margin: 0 -12px
+		@media (max-width : $bpLarge)
+			display: grid
+			text-align: center
+			width: 100%
+			margin: 0
+			justify-content: center
+		&_at
+			margin-top: 64px
+	&__item
+		display: inline-block
+		vertical-align: top
+		width: 17.5%
+		margin: 0 22px
+		@media (max-width : $bpExtraExtraLarge)
+			margin: 0 12px
+		@media (max-width : $bpLarge)
+			width: 240px
+			margin: 16px 0
+		&_1
+			@media (max-width : $bpLarge)
+				grid-row: 5
+		&_2
+			@media (max-width : $bpLarge)
+				grid-row: 4
+		&_3
+			width: 30%
+			@media (max-width : $bpLarge)
+				grid-row: 1
+				width: 100%
+		&_4
+			@media (max-width : $bpLarge)
+				grid-row: 2
+		&_5
+			@media (max-width : $bpLarge)
+				grid-row: 3
+		&_at
+			width: 20%
+			@media (max-width : $bpLarge)
+				width: 80%
+				grid-row: auto
+				padding: 0 12%
+	&__avatar
+		width: 100%
+		padding-top: 128%
+		background:
+			size: contain
+			position: center 20px
+			repeat: no-repeat
+			color: $colorGreyLight
+		&_3
+			background-position: center 40px
+		&_5
+			background-position: center bottom
+		&_at
+			padding-top: 150%
+			background:
+				size: cover
+				position: center center
+	&__info
+		height: 72px
+		margin-top: 24px
+		@media (max-width : $bpLarge)
+			height: auto
+			margin-top: 16px
+	&__name
+		text-transform: uppercase
+		font-weight: 500
+		margin-bottom: 8px
+		&_3
+			font-size: 24px
+			line-height: 32px
+			margin:
+				top: 24px
+				bottom: 16px
+			@media (max-width : $bpExtraExtraLarge)
+				font-size: 20px
+				line-height: 28px
+				margin-bottom: 12px
+		@media (max-width : $bpLarge)
+			font-size: 14px
+			line-height: 20px
+			margin: 0 0 4px 0
+	&__position
+		font-size: 12px
+		line-height: 16px
+		&_3
+			font-size: 16px
+			line-height: 24px
+			@media (max-width : $bpExtraExtraLarge)
+				font-size: 14px
+				line-height: 20px
+			@media (max-width : $bpLarge)
+				font-size: 12px
+				line-height: 16px

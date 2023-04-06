@@ -1,0 +1,72 @@
+.aside-language
+	position: fixed
+	top: 0
+	right: -375px
+	z-index: 9999
+	padding: 0
+	width: 375px
+	height: 100%
+	overflow-y: auto
+	background: $colorWhite
+	transition: .25s
+	@media (max-width : $bpLarge)
+		top: 56px
+		padding-bottom: 56px
+		right: -100%
+		width: 100%
+		transition: right 0s
+		border-top: 1px solid $colorGreyLight
+	&.active
+		right: 0
+		box-shadow: -8px 0 20px rgba($colorBlack, .05)
+		@media (max-width : $bpLarge)
+			box-shadow: none
+
+	&__hr
+		background-color: $colorGreyLight
+		height: 1px
+
+	&__current
+		padding: 32px 48px
+		font-size: 14px
+		line-height: 20px
+		text-transform: uppercase
+		position: relative
+		box-shadow: inset 0 -1px 0 0 $colorGreyLight
+		@media (max-width : $bpLarge)
+			padding: 18px 24px
+
+	&__list
+		margin: 12px 48px 12px 0
+		padding: 0 0 0 48px
+		list-style: none
+		overflow: hidden
+		@media (max-width : $bpLarge)
+			margin: 2px 0 32px 0
+			padding: 0 24px
+	&__item
+		margin: 20px 0
+		font-size: 14px
+		line-height: 20px
+		text-transform: uppercase
+		position: relative
+		@media (max-width : $bpLarge)
+			margin: 16px 0
+
+	&__title
+		display: inline-block
+		vertical-align: top
+		padding-left: 36px
+		position: relative
+		color: $colorBlack
+
+	&__value
+		position: absolute
+		top: 0
+		left: 0
+		box-shadow: inset 0 0 0 1px $colorBlack
+		border-radius: 100%
+		line-height: 20px
+		font-size: 9px
+		width: 20px
+		text-align: center

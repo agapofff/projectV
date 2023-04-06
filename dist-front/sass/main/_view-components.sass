@@ -1,0 +1,172 @@
+.main-components
+	overflow: hidden
+	position: relative
+	text-align: center
+	margin: 128px 0
+	@media (max-width: $bpExtraExtraLarge)
+		margin: 96px 0
+	@media (max-width : $bpLarge)
+		margin: 64px 0
+
+	&__title
+		text-transform: uppercase
+		margin-bottom: 64px
+		@media (max-width : $bpLarge)
+			margin-bottom: 48px
+
+	&__list
+		.main-components
+			overflow: visible !important
+		.swiper-wrapper
+			transition-timing-function: linear !important
+	&__list-inner
+		overflow: visible !important
+		position: relative
+		z-index: 3
+		font-size: 0 !important
+		&.active
+			z-index: 9
+		.simplemarquee-wrapper
+			position: relative
+			z-index: 3
+			&.active
+				z-index: 9
+	&__item
+		display: inline-block
+		vertical-align: top
+		width: 185px
+		height: 212px
+		margin: 0 20px
+		@media (max-width : $bpLarge)
+			width: 92px
+			height: 124px
+			margin: 0 8px
+		&_vitamin:hover
+			.index-components__picture
+				animation-name: shake
+				animation-duration: 2s
+				transform-origin: 50% 50%
+				animation-iteration-count: infinite
+				animation-timing-function: linear
+				transition: .5s
+	&__image
+		height: 148px
+		margin-bottom: 8px
+		position: relative
+		@media (max-width : $bpLarge)
+			height: 74px
+		&.active
+			z-index: 9
+			box-shadow: 0 0 0 2000px rgba($colorGreyLight, .95)
+	&__picture
+		display: block
+		width: 100%
+		height: 100%
+
+		&.active
+			animation-name: flash
+			animation-duration: 4s
+			animation-iteration-count: infinite
+			animation-timing-function: linear
+			transition: .5s
+
+	&__components
+		position: absolute
+		top: 50%
+		left: 50%
+		width: 0
+		height: 0
+	&__component
+		position: absolute
+		top: 50%
+		left: 50%
+		width: 0
+		height: 0
+		background:
+			color: $colorWhite
+			position: center center
+			repeat: repeat
+			size: cover
+		border-radius: 100%
+		transition: .5s
+		&.active
+			width: 84px
+			height: 84px
+			box-shadow: 0 0 0 3px #F1AD2A
+			top: auto
+			left: auto
+			@media (max-width : $bpLarge)
+				width: 60px
+				height: 60px
+			&.i1
+				top: -178px
+				left: -42px
+				@media (max-width : $bpLarge)
+					top: -108px
+					left: -30px
+			&.i2
+				bottom: 28px
+				right: 104px
+				@media (max-width : $bpLarge)
+					bottom: 12px
+					right: 44px
+			&.i3
+				top: 28px
+				right: 104px
+				@media (max-width : $bpLarge)
+					top: 12px
+					right: 44px
+			&.i4
+				bottom: -178px
+				left: -42px
+				@media (max-width : $bpLarge)
+					bottom: -108px
+					left: -30px
+			&.i5
+				top: 28px
+				left: 104px
+				@media (max-width : $bpLarge)
+					top: 12px
+					left: 44px
+			&.i6
+				bottom: 28px
+				left: 104px
+				@media (max-width : $bpLarge)
+					bottom: 12px
+					left: 44px
+	&__name
+		color: rgba($colorBlack, .6)
+		font:
+			size: 14px
+			weight: 600
+		line-height: 16px
+		text-transform: uppercase
+		height: 16px
+		white-space: normal
+		@media (max-width: $bpExtraExtraLarge)
+			font-size: 12px
+		@media (max-width: $bpLarge)
+			font-size: 8px
+			line-height: 12px
+
+
+@keyframes shake
+	0%
+		transform: scale(1)
+	25%
+		transform: scale(0.9)
+	50%
+		transform: scale(1.1)
+	75%
+		transform: scale(0.9)
+	100%
+		transform: scale(1)
+
+
+@keyframes flash
+	0%
+		filter: drop-shadow(0 0 0 $colorPink)
+	50%
+		filter: drop-shadow(0 0 20px $colorPink)
+	100%
+		filter: drop-shadow(0 0 0 $colorPink)

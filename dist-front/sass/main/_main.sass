@@ -1,0 +1,70 @@
+.main
+	height: 100vh
+	@media (max-width : $bpLarge)
+		height: auto
+
+	&__list
+		height: 100%
+	&__item
+		position: relative
+		display: inline-block
+		vertical-align: top
+		width: 50%
+		height: 100%
+		background-color: $colorBlueDark
+		overflow: hidden
+		@media (max-width : $bpLarge)
+			width: 100%
+			height: 0
+			padding-top: 100%
+		&:hover
+			.main
+				&__title
+					opacity: 0
+				&__bg
+					transform: scale(1.2)
+					opacity: 1
+				&__link
+					color: $colorBlack
+					box-shadow: inset 0 0 0 1px $colorBlack
+					&:hover
+						color: rgba($colorBlack, .6)
+
+	&__content
+		position: absolute
+		left: 24px
+		right: 24px
+		bottom: 128px
+		z-index: 2
+		text-align: center
+		color: $colorWhite
+		transition: .25s
+		@media (max-width : $bpLarge)
+			bottom: 64px
+	&__title
+		text-transform: uppercase
+		margin-bottom: 32px
+		transition: .25s
+	&__link
+		transform: scale(1.333)
+		padding:
+			left: 96px !important
+			right: 96px !important
+		@media (max-width : $bpLarge)
+			padding:
+				left: 48px !important
+				right: 48px !important
+
+	&__bg
+		position: absolute
+		top: 0
+		left: 0
+		right: 0
+		bottom: 0
+		z-index: 1
+		background:
+			size: cover
+			position: center center
+			repeat: no-repeat
+		opacity: .5
+		transition: .25s

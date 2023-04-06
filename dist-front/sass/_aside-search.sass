@@ -1,0 +1,89 @@
+.aside-search
+	position: fixed
+	top: -100%
+	left: 0
+	right: 0
+	z-index: 999
+	height: 100%
+	background-color: $colorWhite
+	transition: .25s
+	&.active
+		top: 0
+
+
+	&__header
+		position: relative
+
+	&__input
+		margin: 18px 0
+		width: 75%
+		height: 48px
+		font:
+			family: $font
+			weight: 300
+			size: 20px
+		line-height: 48px
+		background: transparent
+		border: none
+		box-shadow: 0 1px 0 0 $colorBlack
+		outline: none
+		color: $colorBlack
+		text-transform: uppercase
+		&::placeholder
+			color: rgba($colorBlack, .5)
+
+	&__close
+		float: right
+		display: inline-block
+		vertical-align: top
+		margin: 36px 0
+		text-transform: uppercase
+		font-size: 12px
+		line-height: 12px
+		cursor: pointer
+		@media (max-width : $bpLarge)
+			font-size: 0
+	&__close-icon
+		display: inline-block
+		vertical-align: top
+		width: 12px
+		height: 12px
+		margin-right: 12px
+
+
+	&__content
+		margin-top: 60px
+		padding: 0 150px
+		height: 600px
+		@media (max-width : $bpLarge)
+			margin-top: 40px
+			padding: 0 40px
+			height: 420px
+	&__list
+		padding-right: 20%
+		transition: opacity .5s
+		@media (max-width : $bpLarge)
+			padding-right: 25%
+		&_loading
+			opacity: .5
+	&__item
+		display: block
+		margin-top: 30px
+		height: 85px
+		background-color: $colorGreyLight
+	&__cover
+		display: inline-block
+		vertical-align: top
+		border-right: 2px solid $colorGreyLight
+		width: 85px
+		height: 100%
+		background:
+			position: 50% 50%
+			repeat: no-repeat
+			size: 50%
+	&__code
+		display: inline-block
+		vertical-align: top
+		border-right: 2px solid $colorGreyLight
+		width: 180px
+		height: 100%

@@ -1,0 +1,62 @@
+*, :after, :before
+	margin: 0
+	padding: 0
+	box-sizing: border-box
+
+*::-webkit-input-placeholder
+	color: rgba($colorBlack, .5)
+	opacity: 1
+
+*:-moz-placeholder
+	color: rgba($colorBlack, .5)
+	opacity: 1
+
+*::-moz-placeholder
+	color: rgba($colorBlack, .5)
+	opacity: 1
+
+*:-ms-input-placeholder
+	color: rgba($colorBlack, .5)
+	opacity: 1
+
+
+.form
+	.forgot,
+	.change-password
+		cursor: pointer
+		color: $colorBlack
+		border-bottom: 1px dashed $colorBlack
+		display: inline-block
+		vertical-align: top
+		text-decoration: none
+
+.form-group
+	.help-block
+		color: $colorRed
+		font-size: 14px
+		margin-top: 6px
+
+.has-error
+	input[type="text"],
+	input[type="password"],
+	input[type="file"],
+	input[type="number"],
+	input[type="date"],
+	select,
+	textarea
+		border-color: $colorRed
+
+
+.help-hidden
+	display: none
+
+
+.return-status
+	border-left: 5px solid
+	padding: 15px
+	&.success
+		background: rgba($colorGreen, .1)
+		border-color: $colorGreen
+	&.error
+		background: rgba($colorRed, .1)
+		border-color: $colorRed

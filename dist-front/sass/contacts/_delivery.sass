@@ -1,0 +1,129 @@
+.delivery
+
+	&__hr
+		height: 64px
+		@media (max-width : $bpLarge)
+			height: 48px
+
+	&__border-wrapper
+		width: 100%
+		height: 220px
+		padding: 0 40px 0 80px
+		position: relative
+		border: 1px solid $colorBlack
+		display: flex
+		align-items: center
+		@media (max-width : $bpExtraExtraLarge)
+			height: 140px
+			padding: 20px
+		@media (max-width : $bpLarge)
+			height: auto
+			padding: 0
+
+
+	&__title
+		margin-top: 64px
+		text-transform: uppercase
+		text-align: right
+		@media (max-width : $bpExtraExtraLarge)
+			margin-top: 32px
+		@media (max-width : $bpLarge)
+			margin: 0
+			text-align: left
+	&__text
+		text-transform: uppercase
+		opacity: 0.6
+		margin-top: 32px
+		text-align: right
+		@media (max-width : $bpExtraExtraLarge)
+			margin-top: 20px
+		@media (max-width : $bpLarge)
+			text-align: left
+			margin: 12px 0 24px 0
+			br
+				display: none
+
+
+	&__logo-list
+		display: flex
+		flex-direction: row
+		width: 100%
+		@media (max-width : $bpLarge)
+			padding: 24px 16px
+		@media (max-width : $bpSmall)
+			padding: 24px 4px
+	&__logo-item
+		display: inline-block
+		vertical-align: top
+		background:
+			repeat: no-repeat
+			position: center center
+			size: contain
+		margin: 4px 40px 0 0
+		flex: auto
+		@media (max-width : $bpExtraExtraLarge)
+			margin: 4px 24px 0 24px
+		@media (max-width : $bpLarge)
+			margin: 4px 12px 0 12px
+		&_visa
+			width: 100px
+			height: 40px
+			background-image: url('../img/payment__visa.svg?v=1')
+			@media (max-width : $bpLarge)
+				height: 30px
+		&_mir
+			width: 106px
+			height: 40px
+			background-image: url('../img/payment__mir.svg?v=1')
+			@media (max-width : $bpLarge)
+				height: 30px
+		&_mastercard
+			width: 61px
+			height: 52px
+			background-image: url('../img/payment__mastercard.svg?v=1')
+			@media (max-width : $bpLarge)
+				height: 32px
+		&_projectv
+			width: 180px
+			height: 38px
+			background-image: url('../img/logo__projectv.svg?v=1')
+			@media (max-width : $bpLarge)
+				width: 160px
+				height: 28px
+		&_paypal
+			width: 143px
+			height: 38px
+			background-image: url('../img/payment__paypal.svg?v=1')
+			@media (max-width : $bpLarge)
+				width: 105px
+				height: 28px
+
+	&__info
+		@media (max-width : $bpExtraExtraLarge)
+			padding: 0 0 0 20px
+		@media (max-width : $bpExtraLarge)
+			padding: 0
+		@media (max-width : $bpLarge)
+			padding: 24px
+	&__info-text
+		text-transform: uppercase
+		opacity: .6
+		padding-right: 88px
+		@media (max-width : $bpExtraExtraLarge)
+			padding: 0
+	&__info-item
+		width: 50%
+		display: inline-block
+		vertical-align: top
+		text-transform: uppercase
+		position: relative
+		margin-top: 32px
+		@media (max-width : $bpExtraExtraLarge)
+			margin-top: 20px
+		@media (max-width : $bpSmall)
+			width: 100%
+	&__info-price
+		display: inline-block
+		vertical-align: top
+		margin-left: 12px
+		opacity: .6

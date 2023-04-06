@@ -1,0 +1,200 @@
+.component
+	text-transform: uppercase
+	margin: 48px 0
+	padding: 48px 0
+	overflow: hidden
+	@media (max-width : $bpExtraLarge)
+		margin: 40px 0
+		padding: 40px 0
+	@media (max-width : $bpLarge)
+		margin: 32px 0
+		padding: 32px 0
+
+.component-1
+	margin-top: 96px
+	@media (max-width : $bpExtraLarge)
+		margin-top: 72px
+	@media (max-width : $bpLarge)
+		margin-top: 32px
+		padding: 0
+	&__content
+		color: $colorWhite
+		padding: 360px 0 92px 0
+		background:
+			size: cover
+			position: center center
+			repeat: no-repeat
+		@media (max-width : $bpExtraLarge)
+			padding: 140px 24px 32px 24px
+	&__title
+		margin-bottom: 32px
+		@media (max-width : $bpExtraLarge)
+			margin-bottom: 16px
+	&__text
+		font-weight: 500
+
+.component-2
+	&__bg
+		height: 100%
+		background:
+			size: cover
+			position: center center
+			repeat: no-repeat
+		@media (max-width : $bpExtraLarge)
+			padding-top: 50%
+	&__title
+		font-weight: 500
+		background: $colorWhite
+		line-height: 28px
+		@media (max-width : $bpExtraExtraLarge)
+			line-height: 24px
+	&__text
+		font-weight: 500
+		padding: 100px 60px
+		background: $colorWhite
+		line-height: 28px
+		@media (max-width : $bpExtraExtraLarge)
+			line-height: 24px
+		@media (max-width : $bpExtraLarge)
+			padding: 32px 24px
+
+.component-3
+	&__title
+		margin-bottom: 32px
+		@media (max-width : $bpExtraLarge)
+			margin-bottom: 16px
+	&__img-1,
+	&__img-2
+		height: 100%
+		background:
+			size: cover
+			position: center center
+			repeat: no-repeat
+		@media (max-width : $bpExtraLarge)
+			margin-top: 32px
+			padding-top: 50%
+	&__img-2
+		@media (max-width : $bpExtraLarge)
+			display: none
+
+.component-4,
+.component-5
+	&__bg
+		padding-top: 31.25%
+		background:
+			size: cover
+			position: center center
+			repeat: no-repeat
+		margin-bottom: 80px
+		@media (max-width : $bpExtraLarge)
+			margin-bottom: 32px
+			padding-top: 50%
+	&__title
+		margin-bottom: 32px
+		text-align: center
+		@media (max-width : $bpExtraLarge)
+			margin-bottom: 16px
+	&__text
+		font-weight: 500
+		margin-bottom: 80px
+		@media (max-width : $bpExtraLarge)
+			margin-bottom: 32px
+	&__img
+		padding-top: 50%
+		background:
+			size: cover
+			position: center center
+			repeat: no-repeat
+.component-4
+	&__title
+		font-weight: 500
+.component-5
+	&__img
+		padding-top: 32.3%
+		@media (max-width : $bpExtraLarge)
+			padding-top: 50%
+	&__text-2
+		margin:
+			top: 80px
+			bottom: 80px
+		@media (max-width : $bpExtraLarge)
+			margin:
+				top: 32px
+				bottom: 32px
+			&_first
+				margin-bottom: 0
+	&__bg
+		margin-bottom: 0
+
+.component-6
+	&__row-1
+		margin-bottom: 80px
+		@media (max-width : $bpExtraLarge)
+			margin-bottom: 32px
+	&__img-1,
+	&__img-2
+		height: 100%
+		background:
+			size: cover
+			position: center center
+			repeat: no-repeat
+		@media (max-width : $bpExtraLarge)
+			padding-top: 50%
+	&__content
+		margin: 160px 0
+		@media (max-width : $bpExtraLarge)
+			margin: 0
+	&__title
+		margin-bottom: 32px
+		@media (max-width : $bpExtraLarge)
+			margin-bottom: 16px
+	&__text-1
+		font-weight: 500
+		@media (max-width : $bpExtraLarge)
+			margin-top: 32px
+	&__text-2
+		font-weight: 500
+		@media (max-width : $bpExtraLarge)
+			margin-top: 32px
+
+.component-product
+	&__title
+		text-align: center
+		margin-bottom: 32px
+		@media (max-width : $bpExtraLarge)
+			margin-bottom: 16px
+	&__img-product-1,
+	&__img-product-2
+		height: 100%
+		background:
+			size: contain
+			position: center center
+			repeat: no-repeat
+	&__img-product-1
+		padding-top: 75%
+		@media (max-width : $bpExtraLarge)
+			margin: 0
+			padding-top: 75%
+	&__text
+		font-weight: 500
+		@media (max-width : $bpExtraLarge)
+			margin-top: 32px
+	&__btns
+		text-align: center
+		margin-top: 32px
+	&__btn
+		display: inline-block
+		vertical-align: top
+		margin: 0 12px
+		height: 44px
+		.btn,
+		.product__btn-cart
+			width: 168px
+			@media (max-width : $bpExtraLarge)
+				width: 132px
+		.product__btn-cart
+			position: relative
+		.product__btn-cart
+			top: 0
+			right: 0
+			margin: 0

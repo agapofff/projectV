@@ -1,0 +1,80 @@
+.problem
+	margin-top: 60px
+	@media (max-width : $bpExtraLarge)
+		margin-top: 12px
+
+	&__row
+		margin-top: 2px
+		margin-right: -1px
+		margin-left: -1px
+	&__left,
+	&__right
+		padding-right: 1px
+		padding-left: 1px
+	&__right
+		@media (max-width : $bpLarge)
+			display: none
+
+	&__content
+		padding: 24px
+		color: rgba($colorBlack, .6)
+		background-color: $colorGreyLight
+		height: 100%
+		&_left
+			padding: 12px 24px
+		&_bg
+			background:
+				size: cover
+				position: center center
+				repeat: no-repeat
+			position: relative
+	&__product
+		height: 100%
+		background:
+			size: contain
+			position: center center
+			repeat: no-repeat
+	&__title
+		margin: 24px 0
+		color: $colorPink
+		text-transform: uppercase
+	&__text
+		margin: 24px 0
+		b
+			text-transform: uppercase
+			font-weight: normal
+			color: $colorPink
+	&__list
+		margin: 12px 0
+		list-style: none
+		@media (max-width : $bpLarge)
+			margin: 8px 0
+	&__item
+		margin: 16px 0
+		padding-left: 32px
+		position: relative
+	&__item-icon
+		display: block
+		position: absolute
+		top: 50%
+		left: 0
+		margin-top: -4px
+		width: 8px
+		height: 8px
+		border-radius: 100%
+		background-color: $colorPink
+	&__img
+		width: 100%
+		height: 100%
+		background:
+			position: center center
+			repeat: no-repeat
+			size: contain
+		&_arrow
+			background-size: 16px
+
+.dietary-supplement
+	margin-top: 24px
+	background-color: $colorGreyLight
+	padding: 24px
+	text-transform: uppercase

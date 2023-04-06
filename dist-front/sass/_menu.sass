@@ -1,0 +1,131 @@
+.menu
+	position: fixed
+	top: 0
+	left: -100%
+	width: 50%
+	bottom: 0
+	z-index: 999
+	background-color: $colorWhite
+	box-shadow: 8px 0 20px rgba($colorBlack, .05)
+	transition: .25s
+	@media (max-width : $bpLarge)
+		left: auto
+		right: -100%
+		width: 100%
+		overflow-y: auto
+	&.active
+		left: 0
+		@media (max-width : $bpLarge)
+			left: auto
+			right: 0
+
+	&__container
+		height: 100%
+
+	&__close
+		display: inline-block
+		vertical-align: top
+		margin: 36px 0
+		text-transform: uppercase
+		font-size: 12px
+		line-height: 12px
+		cursor: pointer
+		@media (max-width : $bpLarge)
+			margin: 24px 0 0 0
+	&__close-icon
+		display: inline-block
+		vertical-align: top
+		width: 12px
+		height: 12px
+		margin-right: 12px
+
+	&__list
+		width: 100%
+		list-style: none
+		margin: 0
+		padding: 0
+		font-size: 0
+		text-transform: uppercase
+		position: relative
+		@media (max-width : $bpLarge)
+			padding-bottom: 64px
+
+	&__item
+		display: block
+		margin-top: 32px
+		position: relative
+		ul
+			position: absolute
+			top: 0
+			left: 0
+			right: 0
+			bottom: 0
+			z-index: 1
+			opacity: 0
+			width: 100%
+			height: 100vh
+			margin:
+				top: -32px
+				left: 100%
+			transition: .5s
+			@media (max-width : $bpLarge)
+				opacity: 1
+				z-index: 2
+				position: relative
+				height: auto
+				margin: 0
+
+		&.active
+			&::before,
+			&::after
+				content: ''
+				position: absolute
+				top: 0
+				right: 0
+				margin-right: 64px
+				width: 12px
+				height: 1px
+				background-color: $colorBlack
+				border-radius: 1px
+			&::before
+				margin-top: 18px
+				transform: rotate(-45deg)
+			&::after
+				margin-top: 10px
+				transform: rotate(45deg)
+			@media (max-width : $bpLarge)
+				&::before,
+				&::after
+					display: none
+			ul
+				opacity: 1
+				z-index: 2
+			> .menu__link
+				color: $colorBlack
+				box-shadow: 0 1px 0 $colorBlack
+				@media (max-width : $bpLarge)
+					box-shadow: none
+
+		@media (max-width : $bpLarge)
+			ul
+				.menu__item
+					margin-top: 12px
+				.menu__link
+					margin-left: 24px
+					font-size: 14px
+					line-height: 20px
+					color: $colorBlack !important
+
+	&__link
+		display: inline-block
+		vertical-align: top
+		font-size: 20px
+		line-height: 28px
+		color: $colorBlack
+		@media (max-width : $bpLarge)
+			font-size: 12px
+			line-height: 20px
+			color: rgba($colorBlack, .5) !important
+		&:hover
+			color: $colorBlack
+			box-shadow: 0 1px 0 $colorBlack

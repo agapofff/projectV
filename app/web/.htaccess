@@ -1,0 +1,118 @@
+### Сжать ответ сервера для перечисленных MIME типов
+<ifModule mod_deflate.c>
+    <IfModule mod_filter.c>
+        AddOutputFilterByType DEFLATE text/plain text/html
+        AddOutputFilterByType DEFLATE text/css
+        AddOutputFilterByType DEFLATE text/javascript application/javascript application/x-javascript
+        AddOutputFilterByType DEFLATE text/xml application/xml application/xhtml+xml application/rss+xml
+        AddOutputFilterByType DEFLATE application/json
+        AddOutputFilterByType DEFLATE application/vnd.ms-fontobject application/x-font-ttf font/opentype image/svg+xml image/x-icon
+
+        AddOutputFilterByType DEFLATE image/svg+xml
+        AddOutputFilterByType DEFLATE application/x-font-ttf
+        AddOutputFilterByType DEFLATE application/font-woff
+        AddOutputFilterByType DEFLATE application/vnd.ms-fontobject
+        AddOutputFilterByType DEFLATE application/x-font-otf
+    </ifModule>
+</ifModule>
+
+### Подсказать браузеру схему кеширования через заголовки в ответе сервера
+<IfModule mod_expires.c>
+    Header set cache-control: public
+
+    # Fonts
+    # Add correct content-type for fonts
+    AddType application/vnd.ms-fontobject .eot
+    AddType application/x-font-ttf .ttf
+    AddType application/x-font-opentype .otf
+    AddType application/x-font-woff .woff
+    AddType image/svg+xml .svg
+
+    # Enable expires
+    ExpiresActive On
+
+    # Default a cache expiration
+    # ExpiresDefault "access plus 10 month"
+
+    # Images
+    ExpiresByType image/gif                 "access plus 1 year"
+    ExpiresByType image/png                 "access plus 1 year"
+    ExpiresByType image/jpg                 "access plus 1 year"
+    ExpiresByType image/jpeg                "access plus 1 year"
+    ExpiresByType image/svg+xml             "access plus 1 year"
+
+    # Videos
+    ExpiresByType video/mp4                 "access plus 1 month"
+
+    # CSS, JavaScript
+    ExpiresByType text/css                  "access plus 1 year"
+    ExpiresByType application/javascript    "access plus 1 year"
+    ExpiresByType text/javascript           "access plus 1 year"
+
+    # Fonts
+    ExpiresByType font/ttf                  "access plus 1 year"
+    ExpiresByType font/woff                 "access plus 1 year"
+    ExpiresByType image/svg+xml             "access plus 1 year"
+</IfModule>
+
+<IfModule mod_deflate.c>
+    <FilesMatch "\.(ttf|otf|eot|svg)$" >
+        SetOutputFilter DEFLATE
+    </FilesMatch>
+</IfModule>
+
+
+### Удалить заголовок ETag (иначе есть проблемы с кешированием при включенном сжатии)
+<IfModule mod_headers.c>
+    Header unset ETag
+</IfModule>
+FileETag None
+
+
+AddDefaultCharset UTF-8
+
+
+# Включаем отслеживание сим-ссылок
+Options +FollowSymLinks
+# Запускаем url_rewriting
+RewriteEngine on
+# Индексные страницы
+IndexIgnore /
+
+# Редирект с http на https
+# RewriteCond %{HTTP:HTTPS} !=on [NC]
+# RewriteRule ^(.*)$ https://coffeecell.com/$1 [R=301,L]
+# SetEnvIf X-Forwarded-Proto https HTTPS=on
+
+# Редирект со страниц сайта с WWW на страницы без WWW
+RewriteCond %{HTTP_HOST} ^www\.(.*)$ [NC]
+RewriteRule ^(.*)$ https://%1/$1 [R=301,L]
+
+# Убрать точку в конце URL
+RewriteRule ^(.*)\.$ /$1 [R=301,L]
+
+# Убираем повторяющиеся слеши (/) в URL
+RewriteCond %{REQUEST_URI} ^(.*)/{2,}(.*)$
+RewriteRule . %1/%2 [R=301,L]
+
+# Редирект 301 со страниц без слеша на конце на страницы с ним
+RewriteCond %{REQUEST_URI} !\?
+RewriteCond %{REQUEST_URI} !\&
+RewriteCond %{REQUEST_URI} !\=
+RewriteCond %{REQUEST_URI} !\.
+RewriteCond %{REQUEST_URI} !\/$
+RewriteRule ^(.*[^\/])$ /$1/ [R=301,L]
+
+# Если каталог или файла существуют - выдаем его напрямую ->
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+# -> Иначе отправлять запрос на файл index.php
+RewriteRule . index.php [L]
+
+
+# В ряде случаев требуется выводить список файлов в каталоге (листинг каталога) в случае отсутствия в каталоге файла, который показывается по умолчанию.
+Options +Indexes
+# Устанавливает базовый URL для преобразований в контексте каталога
+RewriteBase /
+
+DirectoryIndex index.php index.html

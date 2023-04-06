@@ -1,0 +1,101 @@
+.main-video
+	margin-top: 84px
+	@media (max-width : $bpLarge)
+		margin-top: 56px
+	&__networks
+		float: right
+		position: relative
+		z-index: 3
+		margin-top: -84px
+		@media (max-width: $bpLarge)
+			margin-top: -53px
+		.social-networks__item
+			margin: 0 0 0 20px
+			@media (max-width: $bpLarge)
+				margin: 0 0 0 16px
+
+.main-img
+	padding-top: 40%
+	background:
+		size: cover
+		position: center center
+		repeat: no-repeat
+	@media (max-width : $bpLarge)
+		padding-top: 56.25%
+
+.main-products
+	margin: 128px 0
+	@media (max-width: $bpExtraExtraLarge)
+		margin: 96px 0
+	@media (max-width : $bpLarge)
+		margin: 64px 0
+	&__title
+		text-align: center
+		text-transform: uppercase
+		margin-bottom: 48px
+		@media (max-width : $bpLarge)
+			margin-bottom: 32px
+	&__btn-row
+		text-align: center
+		margin-top: 8px
+		padding: 12px 0
+	&__btn
+		transform: scale(1.5)
+
+.main-app
+	margin: 128px 0
+	@media (max-width: $bpExtraExtraLarge)
+		margin: 96px 0
+	@media (max-width : $bpLarge)
+		margin: 64px 0
+	&__title
+		text-transform: uppercase
+		margin-bottom: 32px
+		@media (max-width : $bpLarge)
+			text-align: center
+			margin-bottom: 24px
+		span
+			color: $colorBlueLight
+	&__text
+		text-transform: uppercase
+		margin-bottom: 32px
+		padding-right: 12%
+		@media (max-width : $bpLarge)
+			margin-bottom: 24px
+			padding-right: 0
+	&__caption
+		text-transform: uppercase
+		margin-bottom: 24px
+		@media (max-width : $bpLarge)
+			text-align: center
+			margin-bottom: 16px
+	&__btn-row
+		@media (max-width : $bpLarge)
+			text-align: center
+	&__btn
+		margin-right: 24px
+		@media (max-width : $bpLarge)
+			margin: 0 8px
+	&__img
+		margin-bottom: 32px
+		padding: 208% 0 0 0
+		background:
+			size: cover
+			position: center center
+			repeat: no-repeat
+		transition: .5s
+
+.store-apple,
+.store-google
+	display: inline-block
+	vertical-align: top
+	width: 135px
+	height: 40px
+	background:
+		size: cover
+		position: center center
+		repeat: no-repeat
+.store-apple
+	background-image: url("../img/icon-apple.svg?v=1")
+.store-google
+	background-image: url("../img/icon-google.svg?v=1")

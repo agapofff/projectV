@@ -1,0 +1,1 @@
+<?= Yii::t('app', 'Телефон: {phone}', ['phone' => $phone], 'ru-RU') ?>

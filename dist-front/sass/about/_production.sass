@@ -1,0 +1,83 @@
+.production
+
+	&__main,
+	&__middle
+		margin-bottom: 128px
+		@media (max-width : $bpExtraExtraLarge)
+			margin-bottom: 96px
+		@media (max-width : $bpLarge)
+			margin-bottom: 64px
+	&__items,
+	&__middle
+		margin-top: 128px
+		@media (max-width : $bpExtraExtraLarge)
+			margin-top: 96px
+		@media (max-width : $bpLarge)
+			margin-top: 64px
+	&__title,
+	&__subtitle
+		margin-bottom: 48px
+		text-transform: uppercase
+		@media (max-width : $bpLarge)
+			margin-bottom: 24px
+	&__img
+		margin: -64px 0
+		padding-top: 75%
+		background:
+			position: center center
+			repeat: no-repeat
+			size: contain
+		@media (max-width : $bpExtraExtraLarge)
+			margin: 0
+		@media (max-width : $bpLarge)
+			margin: 24px 0 0 0
+	&__text
+		opacity: .6
+
+	&__row
+		display: grid
+		grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr
+		grid-column-gap: 20px
+		@media (max-width : $bpExtraExtraLarge)
+			grid-template-columns: 1fr 1fr 1fr 1fr
+		@media (max-width : $bpLarge)
+			grid-template-columns: 1fr 1fr
+		.production-item__svg
+			padding-top: 0 !important
+			height: 100px
+		.production-item__title
+			font-size: 20px
+			line-height: 24px
+
+
+.production-item
+	text-align: center
+	@media (max-width : $bpLarge)
+		margin-bottom: 40px
+	&__svg
+		background:
+			position: center center
+			repeat: no-repeat
+			size: contain
+		margin-bottom: 32px
+		padding-top: 50%
+		@media (max-width : $bpLarge)
+			margin-bottom: 20px
+			padding-top: 0
+			height: 100px
+	&__img
+		background:
+			position: center center
+			repeat: no-repeat
+			size: cover
+		margin-bottom: 32px
+		padding-top: 85%
+		@media (max-width : $bpLarge)
+			margin-bottom: 24px
+	&__title
+		text-transform: uppercase
+		margin-bottom: 16px
+		@media (max-width : $bpLarge)
+			margin-bottom: 8px
+	&__text
+		opacity: .6

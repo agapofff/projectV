@@ -1,0 +1,31 @@
+.app-download
+	display: grid
+	grid-template-columns: 16px 48px 4fr 1fr
+	gap: 8px
+	align-items: center
+	padding: 8px
+	&__close
+		width: 16px
+		height: 16px
+		position: relative
+		z-index: 9
+		cursor: pointer
+	&__img
+		width: 48px
+		height: 48px
+		background:
+			image: url('../img/app-icon.png?v=1')
+			position: center center
+			repeat: no-repeat
+			size: contain
+		border-radius: 4px
+	&__text
+		font-size: 10px
+		line-height: 14px
+		padding: 3px 0
+	&__link
+		font-size: 10px
+		line-height: 16px
+		background-color: $colorPink
+		color: $colorWhite
+		padding: 8px 4px

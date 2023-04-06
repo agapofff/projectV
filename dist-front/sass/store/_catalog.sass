@@ -1,0 +1,119 @@
+.catalog-filters
+	padding-right: 24px
+	@media (max-width : $bpLarge)
+		padding-right: 0
+
+	&__title
+		display: none
+		@media (max-width : $bpLarge)
+			display: inline-block
+			vertical-align: top
+			position: relative
+			font-size: 16px
+			line-height: 28px
+			margin-bottom: 48px
+			padding-left: 56px
+			text-transform: uppercase
+			cursor: pointer
+	&__icon
+		position: absolute
+		top: 0
+		left: 0
+		box-shadow: inset 0 0 0 1px $colorBlack
+		width: 28px
+		height: 28px
+		&::before
+			content: ''
+			border: 5px solid transparent
+				top: 5px solid $colorBlack
+			position: absolute
+			top: 50%
+			left: 50%
+			margin: -2px -5px
+		&.active::before
+			border: 5px solid transparent
+				top: none
+				bottom: 5px solid $colorBlack
+
+	&__content
+		@media (max-width : $bpLarge)
+			display: none
+		&.active
+			@media (max-width : $bpLarge)
+				display: block
+				margin: -12px 0 48px 0
+
+
+
+
+
+.catalog-filter
+	&__row
+		margin-bottom: 64px
+		@media (max-width : $bpLarge)
+			margin-bottom: 32px
+	&__title
+		font:
+			size: 16px
+			weight: 600
+		line-height: 24px
+		text-transform: uppercase
+		margin-bottom: 32px
+	&__list
+		list-style: none
+		margin: 0
+			top: -8px
+		&.category
+			margin-top: -24px
+	&__item
+		margin-top: 8px
+		&.category
+			margin-top: 24px
+		ul
+			list-style: none
+			margin: 0
+			padding-left: 28px
+	&__link,
+	&__link-category
+		position: relative
+		display: inline-block
+		vertical-align: top
+		color: $colorBlack
+		padding-left: 28px
+		transition: .25s
+		&.active
+			&:hover
+				opacity: 1
+				color: rgba($colorBlack, .6)
+				.catalog-filter__checkbox
+					box-shadow: inset 0 0 0 1px $colorBlueLight
+		&.disable
+			color: rgba($colorBlack, .3)
+		small
+			color: rgba($colorBlack, .3)
+			font-size: 12px
+			margin-left: 12px
+	&__link-category
+		text-transform: uppercase
+	&__checkbox
+		position: absolute
+		top: 0
+		left: 0
+		display: inline-block
+		vertical-align: top
+		margin-top: 3px
+		width: 16px
+		height: 16px
+		box-shadow: inset 0 0 0 1px $colorBlack
+		transition: .25s
+		&.selected
+			box-shadow: inset 0 0 0 1px $colorBlueLight
+			background:
+				color: $colorBlueLight
+				image: url("../img/icon__checkbox.svg?v=1")
+				position: center center
+				repeat: no-repeat
+				size: cover
+		&.disable
+			box-shadow: inset 0 0 0 1px rgba($colorBlack, .3)
+			background-color: $colorGreyLight

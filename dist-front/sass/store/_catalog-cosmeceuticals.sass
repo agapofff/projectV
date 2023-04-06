@@ -1,0 +1,118 @@
+.switzerland-cosmetics-components
+	background-color: $colorWhite
+	&.first
+		margin-top: 60px
+		@media (max-width : $bpExtraLarge)
+			margin-top: 12px
+
+
+.switzerland-cosmetics
+	background-color: $colorGreyLight
+	&__section
+		&_2
+			background-color: $colorGreyMiddle
+		&_dg
+			display: grid
+			grid-template-columns: 55% 45%
+			@media (max-width : $bpMedium)
+				display: block
+		&_dg2
+			display: grid
+			grid-template-columns: 45% 55%
+			@media (max-width : $bpMedium)
+				display: block
+	&__left,
+	&__right
+		position: relative
+	&__img
+		position: absolute
+		top: 0
+		left: 0
+		right: 0
+		bottom: 0
+		background:
+			size: contain
+			repeat: no-repeat
+			position: center center
+		@media (max-width : $bpMedium)
+			position: relative
+			margin: 20px 0
+			padding-top: 50%
+		&_1
+			@media (max-width : $bpMedium)
+				background-size: cover
+		&_2
+			top: -100px
+			@media (max-width : $bpExtraExtraLarge)
+				top: -60px
+			@media (max-width : $bpMedium)
+				top: 0
+		&_desktop
+			@media (max-width : $bpMedium)
+				display: none
+		&_mobile
+			display: none
+			@media (max-width : $bpMedium)
+				display: block
+	&__bg
+		padding-top: 29%
+		background:
+			size: cover
+			repeat: no-repeat
+			position: center center
+		@media (max-width : $bpMedium)
+			padding-top: 42%
+		&_2
+			padding-top: 39%
+			@media (max-width : $bpMedium)
+				padding-top: 42%
+	&__content
+		padding: 100px 20px
+		text-align: center
+		@media (max-width : $bpLarge)
+			padding: 60px 20px
+		@media (max-width : $bpMedium)
+			text-align: left
+			padding: 40px 20px
+	&__content-2
+		padding: 180px 80px
+		@media (max-width : $bpExtraExtraLarge)
+			padding: 100px 40px
+		@media (max-width : $bpMedium)
+			padding: 0 20px 40px 20px
+	&__title
+		text-transform: uppercase
+		font:
+			size: 24px
+			weight: bold
+		line-height: 125%
+		margin-bottom: 24px
+		@media (max-width : $bpExtraExtraLarge)
+			br
+				display: none
+		@media (max-width : $bpLarge)
+			font-size: 20px
+	&__text
+		padding: 0 30%
+		@media (max-width : $bpExtraExtraLarge)
+			padding: 0 25%
+		@media (max-width : $bpMedium)
+			padding: 0
+		&_2
+			padding: 0 20%
+			@media (max-width : $bpExtraExtraLarge)
+				padding: 0 15%
+			@media (max-width : $bpMedium)
+				padding: 0
+
+	&__video
+		padding-top: 56.25%
+		position: relative
+	&__iframe
+		position: absolute
+		top: 0
+		left: 0
+		right: 0
+		bottom: 0
+		width: 100%
+		height: 100%

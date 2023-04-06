@@ -1,0 +1,364 @@
+.usual-page
+	padding: 148px 0 128px 0
+	@media (max-width : $bpLarge)
+		padding: 88px 0 64px 0
+
+
+
+
+
+
+
+.content
+	position: relative
+	padding: 148px 0 128px 0
+	@media (max-width : $bpLarge)
+		padding: 88px 0 64px 0
+
+	&__flex
+		display: flex
+		flex-direction: column
+		justify-content: center
+		height: 100%
+
+	&__nav
+		@media (max-width : $bpLarge)
+			padding: 5px 0
+	&__nav-btn
+		display: flex
+		justify-content: center
+		align-items: center
+		font-size: 0
+		background-color: $colorWhite
+		position: fixed
+		top: 0
+		left: 0
+		bottom: 0
+		z-index: 3
+		width: 90px
+		height: 100%
+		@media (max-width : $bpExtraExtraLarge)
+			width: 64px
+		@media (max-width : $bpExtraLarge)
+			display: none
+		@media (max-width : $bpLarge)
+			display: block
+			justify-content: left
+			align-items: normal
+			background-color: transparent
+			position: relative
+			width: auto
+			margin: 25px 0 0 0
+			padding: 0 25px
+		&_special
+			@media (max-width : $bpLarge)
+				height: 24px
+	&__nav-bullet
+		display: flex
+		justify-content: center
+		align-items: center
+		position: fixed
+		top: 0
+		left: 90px
+		bottom: 0
+		z-index: 3
+		width: 60px
+		height: 100%
+		@media (max-width : $bpExtraExtraLarge)
+			left: 64px
+			width: 40px
+		@media (max-width : $bpExtraLarge)
+			display: none
+	&__nav-title
+		position: fixed
+		left: 120px
+		right: 120px
+		bottom: 60px
+		z-index: 999
+		line-height: 20px
+		@media (max-width : $bpExtraExtraLarge)
+			left: 84px
+			right: 84px
+			bottom: 40px
+		@media (max-width : $bpExtraLarge)
+			left: 0
+			right: 0
+			line-height: 16px
+		@media (max-width : $bpLarge)
+			position: relative
+			left: 0
+			right: 0
+			bottom: 0
+	&__wrapper
+		&_screen,
+		&_nav
+			position: absolute
+			left: 150px
+			right: 150px
+			@media (max-width : $bpExtraExtraLarge)
+				left: 104px
+				right: 104px
+			@media (max-width : $bpExtraLarge)
+				left: 40px
+				right: 40px
+			@media (max-width : $bpLarge)
+				position: relative
+				left: 0
+				right: 0
+		&_screen
+			height: 600px
+			margin-top: -300px
+			opacity: 0
+			top: 50%
+			z-index: 2
+			display: flex
+			justify-content: center
+			align-items: center
+			transition: top .6s, opacity .6s
+			@media screen and (max-width : $bpExtraExtraLarge), screen and (max-height: 620px)
+				height: 420px
+				margin-top: -210px
+			@media (max-width : $bpExtraLarge), screen and (max-height: 560px)
+				height: 360px
+				margin-top: -180px
+			@media (max-width : $bpLarge)
+				height: auto
+				margin: 30px 0 60px 0
+				display: block
+				transition: top 0s
+			&-open
+				opacity: 1
+				top: 50%
+			&-close
+				top: -200%
+		&_nav
+			top: 0
+			bottom: 0
+	&__swiper
+		height: 100%
+		transition: opacity 1.2s
+		@media (max-width : $bpLarge)
+			height: auto
+			border-top: 1px solid rgba($colorWhite, .2)
+			padding: 0 25px
+	&__bg-right
+		position: absolute
+		top: 0
+		left: 57%
+		right: 0
+		bottom: 0
+		z-index: -1
+		background-color: $colorWhite
+		@media (max-width : $bpLarge)
+			display: none
+		&_8to4
+			left: 64.45%
+			background:
+				size: cover
+				position: left center
+				repeat: no-repeat
+
+
+.screen
+	&__row,
+	&__col
+		display: flex
+		align-items: flex-end
+		justify-content: flex-end
+	&__row
+		flex: auto
+	&__left-wrapper
+		text-align: right
+		padding: 0 0 45px 0
+		width: 100%
+		@media (max-width : $bpExtraExtraLarge)
+			padding: 0 0 30px 0
+		@media (max-width : $bpExtraLarge)
+			padding: 0
+		@media (max-width : $bpLarge)
+			text-align: left
+			width: 100%
+	&__right-wrapper
+		width: 100%
+		height: 100%
+		padding: 60px 0 0 0
+		position: relative
+		@media (max-width : $bpExtraExtraLarge)
+			padding: 40px 0 0 0
+		@media (max-width : $bpExtraLarge)
+			padding: 0
+		@media (max-width : $bpLarge)
+			margin: 60px 0 0 0
+	&__title
+		font:
+			size: 42px
+			weight: 300
+		letter-spacing: 3px
+		line-height: 54px
+		text-transform: uppercase
+		margin: 0
+		padding: 0
+		@media (max-width : $bpExtraExtraLarge)
+			font-size: 32px
+			line-height: 40px
+			letter-spacing: 2px
+		@media (max-width : $bpExtraLarge)
+			font-size: 28px
+			line-height: 36px
+			letter-spacing: 1.5px
+		@media (max-width : $bpLarge)
+			font-size: 16px
+			line-height: 28px
+			letter-spacing: 1px
+			br
+				display: none
+	&__subtitle
+		margin-top: 15px
+		font-size: 12px
+		line-height: 22px
+		letter-spacing: 0.75px
+		text-transform: uppercase
+		@media (max-width : $bpExtraExtraLarge)
+			margin-top: 10px
+			font-size: 10px
+			line-height: 20px
+			letter-spacing: 0.5px
+		@media (max-width : $bpLarge)
+			br
+				display: none
+	&__text
+		margin-top: 30px
+		color: rgba($colorWhite, .5)
+		@media (max-width : $bpExtraExtraLarge)
+			margin-top: 20px
+			padding-left: 20px
+		@media (max-width : $bpExtraLarge)
+			padding-left: 0
+
+	&__list
+		margin: 30px 0 0 0
+		padding: 0
+		list-style: none
+		font-size: 0
+		@media (max-width : $bpExtraExtraLarge)
+			margin: 20px 0 0 0
+		@media (max-width : $bpLarge)
+			margin: 40px 0 0 0
+		@media (max-width : $bpSmall)
+			margin: 20px 0 0 0
+			display: table
+			width: 100%
+	&__item
+		display: inline-block
+		vertical-align: top
+		margin: 30px 0 0 30px
+		@media (max-width : $bpExtraExtraLarge)
+			margin: 20px 0 0 20px
+		@media (max-width : $bpSmall)
+			margin: 0
+			padding-left: 0
+			display: table-row
+			&:first-child
+				margin: 0
+		&:first-child
+			margin-left: 0
+		i,
+		b
+			display: inline-block
+			vertical-align: top
+			height: 36px
+			@media (max-width : $bpExtraExtraLarge)
+				height: 32px
+			@media (max-width : $bpExtraLarge)
+				height: 28px
+			@media (max-width : $bpSmall)
+				display: table-cell
+				padding: 10px 15px 0 0
+		i
+			text-transform: uppercase
+			font:
+				size: 10px
+				style: normal
+			line-height: 18px
+			letter-spacing: .5px
+			margin-right: 15px
+			@media (max-width : $bpExtraExtraLarge)
+				line-height: 16px
+				margin-right: 10px
+			@media (max-width : $bpExtraLarge)
+				font-size: 9px
+				line-height: 14px
+				letter-spacing: 0
+				margin-right: 8px
+			@media (max-width : $bpLarge)
+				margin: 0 0 0 8px
+			@media (max-width : $bpSmall)
+				margin: 0
+				padding-right: 0
+				width: 85%
+		b
+			font:
+				size: 36px
+				weight: 300
+			line-height: 36px
+			min-width: 34px
+			letter-spacing: 1px
+			text-transform: uppercase
+			position: relative
+			@media (max-width : $bpExtraExtraLarge)
+				font-size: 32px
+				line-height: 32px
+				letter-spacing: 0
+				min-width: 30px
+			@media (max-width : $bpExtraLarge)
+				font-size: 28px
+				line-height: 28px
+				min-width: 26px
+			@media (max-width : $bpSmall)
+				width: 15%
+				text-align: right
+			svg
+				display: block
+				height: 100%
+				position: absolute
+				top: 0
+				right: 0
+				color: $colorWhite
+				@media (max-width : $bpLarge)
+					right: 15px
+					padding-top: 10px
+
+	&__border
+		position: absolute
+		top: 60px
+		left: 30px
+		right: 0
+		bottom: 0
+		z-index: -1
+		border: 2px solid $colorWhite
+		@media (max-width : $bpExtraExtraLarge)
+			top: 40px
+			left: 20px
+		@media (max-width : $bpExtraLarge)
+			top: 0
+			left: 0
+	&__img
+		width: 100%
+		height: 100%
+		&_desc
+			display: block
+			@media (max-width : $bpLarge)
+				display: none
+		&_mob
+			display: none
+			@media (max-width : $bpLarge)
+				display: block
+
+	&__desk
+		display: block
+		@media (max-width : $bpLarge)
+			display: none
+	&__mob
+		display: none
+		@media (max-width : $bpLarge)
+			display: block

@@ -1,0 +1,167 @@
+/* font */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400&display=swap')
+$font: 'Montserrat', 'Arial', sans-serif
+
+
+/* breakpoint */
+$bpSpecialLarge: '1799px' // xxxl +
+$bpExtraExtraLarge: '1499px' // xxl +
+$bpExtraLarge: '1199px' // xl
+$bpLarge: '991px' // lg +
+$bpMedium: '767px' // md
+$bpSmall: '575px' // sm
+
+
+/* color */
+$colorWhite: #FFFFFF
+$colorGreyLight: #F6F8FB
+$colorGreyMiddle: #C2CED9
+$colorPink: #E64791
+$colorBlueLight: #00A7E1
+$colorBlueDark: #344974
+$colorBlack: #231F20
+
+
+/* font-size */
+.fz1
+	font:
+		family: $font
+		size: 64px
+		weight: 400
+	line-height: 68px
+	@media (max-width: $bpExtraExtraLarge)
+		font-size: 48px
+		line-height: 56px
+	@media (max-width: $bpLarge)
+		font-size: 32px
+		line-height: 40px
+.fz2
+	font:
+		family: $font
+		size: 48px
+		weight: 400
+	line-height: 56px
+	@media (max-width: $bpExtraExtraLarge)
+		font-size: 36px
+		line-height: 44px
+	@media (max-width: $bpLarge)
+		font-size: 24px
+		line-height: 32px
+.fz3
+	font:
+		family: $font
+		size: 36px
+		weight: 400
+	line-height: 44px
+	@media (max-width: $bpLarge)
+		font-size: 24px
+		line-height: 32px
+.fz4
+	font:
+		family: $font
+		size: 28px
+		weight: 400
+	line-height: 36px
+	@media (max-width: $bpExtraExtraLarge)
+		font-size: 24px
+		line-height: 32px
+	@media (max-width: $bpLarge)
+		font-size: 16px
+		line-height: 24px
+.fz4-5
+	font:
+		family: $font
+		size: 20px
+		weight: 400
+	line-height: 28px
+	@media (max-width: $bpExtraExtraLarge)
+		font-size: 18px
+		line-height: 24px
+	@media (max-width: $bpLarge)
+		font-size: 16px
+		line-height: 24px
+.fz5
+	font:
+		family: $font
+		size: 14px
+		weight: 300
+	line-height: 24px
+	@media (max-width: $bpLarge)
+		font-size: 12px
+		line-height: 20px
+.fz6
+	font:
+		family: $font
+		size: 12px
+		weight: 300
+	line-height: 20px
+	text-transform: uppercase
+
+
+/* desktop-tablet-mobile */
+.mobile
+	display: none
+	@media (max-width: $bpLarge)
+		display: inherit
+.tablet
+	display: none
+	@media (max-width: $bpExtraExtraLarge)
+		display: inherit
+	@media (max-width: $bpLarge)
+		display: none
+.desktop
+	display: inherit
+	@media (max-width: $bpExtraExtraLarge)
+		display: none
+
+.tablet.desktop
+	display: inherit
+	@media (max-width: $bpLarge)
+		display: none
+.mobile.tablet
+	display: none
+	@media (max-width: $bpExtraExtraLarge)
+		display: inherit
+.mobile.desktop
+	display: inherit
+	@media (max-width: $bpExtraExtraLarge)
+		display: none
+	@media (max-width: $bpLarge)
+		display: inherit
+
+
+/* video */
+.video
+	padding-top: 56.25%
+	position: relative
+	&__muted
+		position: absolute
+		left: 64px
+		bottom: 42px
+		z-index: 3
+		width: 64px
+		height: 64px
+		cursor: pointer
+		border: 1px solid $colorWhite
+			radius: 100%
+		background:
+			size: 50%
+			repeat: no-repeat
+			position: center center
+			image: url("../img/icon-sound-off.svg?v=1")
+		transition: opacity .25s
+		@media (max-width: $bpLarge)
+			left: 20px
+			bottom: 20px
+			width: 48px
+			height: 48px
+		&.active
+			background-image: url("../img/icon-sound-on.svg?v=1")
+	&__iframe
+		position: absolute
+		top: 0
+		left: 0
+		right: 0
+		bottom: 0
+		width: 100%
+		height: 100%

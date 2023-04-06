@@ -1,0 +1,125 @@
+.error-nav
+	@media (max-width : $bpLarge)
+		display: none
+
+.error
+	@media (max-width : $bpLarge)
+		border: none
+		margin-top: 60px
+
+	&__screen
+		display: block
+
+	&__screen-col
+		display: flex
+		align-items: center
+		justify-content: center
+		width: 50%
+		@media (max-width : $bpLarge)
+			display: block
+			width: 100%
+
+	&__content
+		position: relative
+		padding-right: 190px
+		text-align: right
+		text-transform: uppercase
+		width: 100%
+		@media (max-width : $bpExtraExtraLarge)
+			padding-right: 150px
+		@media (max-width : $bpExtraLarge)
+			padding-right: 130px
+		@media (max-width : $bpLarge)
+			text-align: left
+			padding-right: 0
+	&__title
+		font-size: 60px
+		font-weight: 300
+		line-height: 60px
+		margin: 19px 0 15px 0
+		@media (max-width : $bpExtraExtraLarge)
+			font-size: 46px
+			line-height: 46px
+			margin: 15px 0 10px 0
+		@media (max-width : $bpExtraLarge)
+			font-size: 36px
+			line-height: 36px
+			margin: 15px 0 20px 0
+		@media (max-width : $bpLarge)
+			font-size: 32px
+			line-height: 36px
+			margin: 0
+	&__subtitle
+		font-size: 18px
+		font-weight: 300
+		line-height: 30px
+		margin: 15px 0 19px 0
+		@media (max-width : $bpExtraExtraLarge)
+			font-size: 12px
+			line-height: 18px
+			margin: 10px 0 15px 0
+		@media (max-width : $bpExtraLarge)
+			margin: 20px 0 15px 0
+		@media (max-width : $bpLarge)
+			font-size: 10px
+			line-height: 14px
+			margin: 15px 0 0 0
+	&__btns
+		position: absolute
+		top: 0
+		right: 0
+		width: 140px
+		@media (max-width : $bpExtraExtraLarge)
+			width: 100px
+		@media (max-width : $bpLarge)
+			position: relative
+			right: 0
+			width: 100%
+	&__btn
+		display: block
+		margin: 25px 0
+		@media (max-width : $bpExtraExtraLarge)
+			margin: 18px 0
+		@media (max-width : $bpLarge)
+			height: 48px
+			line-height: 48px
+			display: inline-block
+			vertical-align: top
+			margin: 30px 20px 0 0
+			padding: 0 25px
+	&__bg
+		background:
+			image: url('../img/bg-error.svg?v=1')
+			position: center center
+			size: cover
+			repeat: no-repeat
+		@media (max-width : $bpLarge)
+			margin: 0 -25px
+			display: block
+			flex: auto
+			position: relative
+			left: 0
+			top: 0
+			bottom: 0
+			&::after
+				content: ''
+				position: absolute
+				left: 0
+				right: 0
+				bottom: 0
+				z-index: 9
+				height: 50px
+				background-color: $colorGreyLight
+	&__code
+		font:
+			size: 250px
+			weight: bold
+		line-height: 100vh
+		color: #D8A7A7
+		text-align: center
+		@media (max-width : $bpExtraExtraLarge)
+			font-size: 150px
+		@media (max-width : $bpLarge)
+			font-size: 43vw
+			line-height: 100%
+			padding: 25px 0 75px 0

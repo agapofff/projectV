@@ -1,0 +1,51 @@
+.cookies
+
+	&__wrap
+		position: fixed
+		z-index: 999
+		left: 0
+		right: 0
+		bottom: 0
+		color: $colorWhite
+		background-color: $colorBlack
+		padding: 24px 0
+		@media (max-width: $bpMedium)
+			text-align: center
+	&__inner
+		padding-right: 200px
+		position: relative
+		@media (max-width: $bpMedium)
+			padding-right: 0
+	&__text
+		display: inline-block
+		vertical-align: top
+		margin-right: 120px
+		@media (max-width: $bpSpecialLarge)
+			margin-right: 60px
+		@media (max-width: $bpExtraExtraLarge)
+			margin-right: 0
+		@media (max-width: $bpMedium)
+			font-size: 12px
+			line-height: 16px
+		a
+			color: $colorWhite
+			text-decoration: underline
+
+	&__hr
+		@media (max-width: $bpMedium)
+			display: none
+	&__btn
+		display: inline-block
+		vertical-align: top
+		margin: 2px 0
+		@media (max-width: $bpExtraExtraLarge)
+			position: absolute
+			top: 50%
+			right: 0
+			margin-top: -18px
+		@media (max-width: $bpMedium)
+			position: relative
+			top: 0
+			margin:
+				top: 20px
+				bottom: 0

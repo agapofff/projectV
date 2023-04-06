@@ -1,0 +1,722 @@
+.slider-horizontal-title,
+.slider-horizontal-info,
+.slider-border-vertical,
+.slider-border-horizontal,
+.slider-vertical,
+.slider-event,
+.img-thumb-slider,
+.review-slider,
+.img-slider
+
+	.slick-slider
+		position: relative
+		user-select: none
+		touch-action: pan-y
+	.slick-list
+		position: relative
+		display: block
+		overflow: hidden
+		margin: 0
+		padding: 0
+	.slick-track
+		position: relative
+		top: 0
+		left: 0
+		display: block
+		margin-left: auto
+		margin-right: auto
+		height: 100%
+	.slick-slide
+		float: left
+		min-height: 1px
+		outline: none
+	.slick-slider .slick-track,
+	.slick-slider .slick-list
+		transform: translate3d(0, 0, 0)
+
+	.slick-arrow
+		width: 32px
+		height: 32px
+		border: 2px solid $colorWhite
+		font-size: 0
+		cursor: pointer
+		outline: none
+		background:
+			color: transparent
+			repeat: no-repeat
+			position: 50% 50%
+			size: 6px 10px
+		@media (max-width : $bpExtraExtraLarge)
+			width: 24px
+			height: 24px
+	.slick-view
+		border: none
+		background:
+			image: url('../img/icon__nav_view.svg?v=1')
+			size: cover
+		@media (max-width : $bpExtraExtraLarge)
+			background-image: url('../img/icon__nav_view_m.svg?v=1')
+		@media (max-width : $bpLarge)
+			display: none
+	.slick-prev
+		background-image: url('../img/icon__nav_prev.svg?v=1')
+	.slick-next
+		background-image: url('../img/icon__nav_next.svg?v=1')
+	.slick-prev,
+	.slick-next
+		transition: opacity .5s
+		@media (hover: hover)
+			&:hover
+				opacity: .3
+
+
+.slider-vertical-title
+	width: 100%
+	position: relative
+
+	.slick-arrow
+		position: absolute
+		right: 0
+		z-index: 9
+	.slick-prev
+		top: 16px
+	.slick-next
+		bottom: 0
+
+	&__list
+		overflow: hidden
+	&__item
+		display: inline-block
+		vertical-align: top
+		position: relative
+		cursor: pointer
+		height: 197px
+		@media (max-width : $bpExtraExtraLarge)
+			height: 150px
+		&.slick-current
+			border-color: rgba($colorWhite, .5)
+
+.slider-horizontal-info
+	float: right
+	width: 500px
+	height: 110px
+	margin:
+		top: 30px
+		right: 57px
+	position: relative
+	@media (max-width : $bpExtraExtraLarge)
+		width: 400px
+		height: 84px
+		margin:
+			top: 40px
+			right: 48px
+	@media (max-width : $bpExtraLarge)
+		width: 360px
+	@media (max-width : $bpLarge)
+		width: 100%
+		height: 144px
+		margin: -30px 0 0 0
+		background-color: $colorWhite
+		box-shadow: -25px 0 0 0 $colorWhite, 25px 0 0 0 $colorWhite
+
+	.slick-list
+		padding-top: 30px
+		overflow: hidden
+		@media (max-width : $bpLarge)
+			position: absolute
+			top: 30px
+			left: 0
+			right: 25px
+	.slick-arrow
+		position: absolute
+		right: -57px
+		z-index: 9
+		@media (max-width : $bpExtraExtraLarge)
+			right: -48px
+		@media (max-width : $bpLarge)
+			right: 0
+	.slick-prev
+		top: 30px
+		@media (max-width : $bpExtraExtraLarge)
+			top: 20px
+		@media (max-width : $bpLarge)
+			top: 50px
+	.slick-next
+		bottom: 0
+		@media (max-width : $bpLarge)
+			bottom: 30px
+
+	&__list
+		height: 110px
+		position: absolute !important
+		top: 0
+		left: 0
+		right: 0
+		@media (max-width : $bpExtraExtraLarge)
+			height: 100%
+	&__item
+		display: inline-block
+		vertical-align: top
+		width: 84px
+		height: 80px
+		border: 2px solid $colorGreyLight
+		margin-left: 20px
+		position: relative
+		cursor: pointer
+		@media (max-width : $bpExtraExtraLarge)
+			width: 68px
+			height: 64px
+			margin-left: 15px
+		@media (max-width : $bpLarge)
+			margin: 0 20px 0 0
+		&.slick-current
+			border-color: rgba($colorWhite, .3)
+	&__img
+		position: absolute
+		left: -2px
+		right: -2px
+		bottom: 0
+		height: 108px
+		cursor: pointer
+		background:
+			size: contain
+			repeat: no-repeat
+			position: bottom center
+		@media (max-width : $bpExtraExtraLarge)
+			height: 84px
+
+
+.slider-border-vertical
+	position: relative
+	height: 100%
+	@media (max-width : $bpSmall)
+		height: auto
+
+	.slick-arrow
+		position: absolute
+		z-index: 9
+
+	&__list
+		height: 100%
+		margin: 0
+		padding: 45px
+		@media (max-width : $bpExtraLarge)
+			padding: 30px
+		@media (max-width : $bpLarge)
+			padding: 25px
+		.slick-arrow
+			left: 45px
+		.slick-prev
+			bottom: 93px
+			@media (max-width : $bpExtraExtraLarge)
+				left: 45px
+				bottom: 57px
+			@media (max-width : $bpExtraLarge)
+				left: 30px
+				bottom: 42px
+			@media (max-width : $bpLarge)
+				left: 25px
+			@media (max-width : $bpSmall)
+				top: 50px
+				left: auto
+				right: 12%
+				bottom: auto
+		.slick-next
+			bottom: 45px
+			@media (max-width : $bpExtraExtraLarge)
+				left: 85px
+				bottom: 57px
+			@media (max-width : $bpExtraLarge)
+				left: 70px
+				bottom: 42px
+			@media (max-width : $bpLarge)
+				left: 65px
+			@media (max-width : $bpSmall)
+				top: 95px
+				bottom: auto
+				right: 12%
+				left: auto
+	&__item
+		height: 320px
+		overflow: hidden
+		@media (max-width : $bpExtraExtraLarge)
+			height: 250px
+		@media (max-width : $bpSmall)
+			height: auto
+	&__title
+		text-transform: uppercase
+		font-size: 18px
+		line-height: 26px
+		margin-bottom: 15px
+		word-wrap: break-word
+		@media (max-width : $bpExtraExtraLarge)
+			font-size: 14px
+			line-height: 22px
+		@media (max-width : $bpExtraExtraLarge)
+			margin-bottom: 10px
+	&__text
+		font-size: 14px
+		line-height: 20px
+		opacity: .5
+		@media (max-width : $bpExtraExtraLarge)
+			font-size: 12px
+			line-height: 18px
+	&__btn
+		position: absolute
+		right: 45px
+		bottom: 45px
+		transition: background-color .25s
+		@media (max-width : $bpExtraLarge)
+			right: 30px
+			bottom: 30px
+		@media (max-width : $bpSmall)
+			position: relative
+			right: 0
+			bottom: 0
+			margin: 0 0 25px 25px
+
+
+.slider-border-horizontal
+	.slick-slider,
+	.slick-list
+		width: 100%
+		height: 100%
+	.slick-slide
+		display: inline-block
+		vertical-align: top
+		width: 100%
+		height: 100%
+		div
+			width: 100%
+			height: 100%
+
+	.slick-arrow
+		display: none
+		@media (max-width : $bpSmall)
+			display: block
+			position: absolute
+			z-index: 9
+
+	.slick-prev
+		@media (max-width : $bpSmall)
+			top: 80px
+			right: 25px
+			bottom: auto
+	.slick-next
+		@media (max-width : $bpSmall)
+			top: 120px
+			right: 25px
+			left: auto
+
+
+.slider-event
+	position: absolute
+	top: 0
+	left: 56%
+	right: 0
+	bottom: 0
+	z-index: 9
+	height: 100%
+	overflow: hidden
+	@media (max-width : $bpLarge)
+		position: relative
+		left: 0
+		height: auto
+		margin: -1px -25px 0 -25px
+		padding: 30px 0
+		border:
+			top: 1px solid $colorGreyLight
+			bottom: 1px solid $colorGreyLight
+
+	.slick-list
+		overflow: visible
+		padding: 0 !important
+
+	&__list
+		@media (max-width : $bpLarge)
+			height: 168px
+		&_all
+			opacity: 0
+			transition: opacity 1.2s
+			&.slick-initialized
+				opacity: 1
+	&__item
+		width: 400px
+		height: 122px
+		margin: 20px 0
+		padding-left: 241px
+		position: relative
+		@media (max-width : $bpExtraExtraLarge)
+			height: 106px
+			margin: 18px 0
+			padding-left: 138px
+		@media (max-width : $bpLarge)
+			width: 118px
+			height: 168px
+			margin: 0 16px
+			padding: 114px 0 0 0
+	&__cover
+		position: absolute
+		top: 0
+		left: 0
+		padding: 14px
+		border: 2px solid $colorWhite
+		@media (max-width : $bpExtraExtraLarge)
+			padding: 12px
+		@media (max-width : $bpLarge)
+			padding: 10px
+	&__img
+		width: 188px
+		height: 90px
+		background:
+			color: $colorWhite
+			position: center center
+			repeat: no-repeat
+			size: auto 100%
+		transition: .5s
+		@media (max-width : $bpExtraExtraLarge)
+			width: 94px
+			height: 78px
+		@media (hover: hover)
+			&:hover
+				background-size: auto 110%
+	&__year
+		font:
+			size: 30px
+			weight: 300
+		line-height: 40px
+		letter-spacing: 2px
+		color: $colorGreyLight
+		margin: 30px 0 15px 0
+		@media (max-width : $bpExtraExtraLarge)
+			font-size: 24px
+			line-height: 32px
+			margin: 30px 0 12px 0
+		@media (max-width : $bpLarge)
+			display: none
+	&__title
+		text-transform: uppercase
+		font-size: 12px
+		line-height: 20px
+		@media (max-width : $bpExtraExtraLarge)
+			font-size: 10px
+			line-height: 18px
+	&__year-title
+		text-transform: uppercase
+		font-size: 20px
+		line-height: 28px
+		color: rgba($colorWhite, .5)
+		width: 100%
+		padding: 0 25px 25px 25px
+
+	&__prev,
+	&__next
+		display: inline-block
+		vertical-align: top
+		width: 28px
+		height: 28px
+		background:
+			repeat: no-repeat
+			position: 50% 50%
+			size: 6px 10px
+
+	&__prev
+		background-image: url('../img/icon__nav_prev.svg?v=1')
+	&__next
+		background-image: url('../img/icon__nav_next.svg?v=1')
+
+
+.img-thumb-slider,
+.review-slider
+	position: absolute
+	top: 0
+	left: 0
+	right: 0
+	bottom: 0
+	z-index: 9
+	@media (max-width : $bpLarge)
+		height: 350px
+	@media (max-width : $bpSmall)
+		height: 300px
+	.slick-list
+		height: 100%
+
+	&__list
+		position: absolute !important
+		top: 0
+		left: 0
+		right: 69px
+		bottom: 0
+		@media (max-width : $bpExtraExtraLarge)
+			right: 100px
+		@media (max-width : $bpLarge)
+			left: 0
+			right: 0
+	&__item
+		display: inline-block
+		vertical-align: top
+		height: 100%
+		position: relative
+	&__nav
+		position: absolute
+		right: 0
+		bottom: 60px
+		@media (max-width : $bpExtraExtraLarge)
+			bottom: 60px
+		@media (max-width : $bpLarge)
+			left: 50px
+			bottom: -51px
+		.slick-arrow
+			margin-top: 16px
+			@media (max-width : $bpLarge)
+				margin: 0 16px 0 0
+				display: inline-block
+				vertical-align: top
+		.slick-view
+			@media (max-width : $bpLarge)
+				display: none
+
+.img-thumb-slider
+	div
+		height: 100%
+	&__item
+		cursor: pointer
+	&__img
+		position: absolute
+		top: 0
+		left: 0
+		right: 0
+		bottom: 40px
+		background:
+			size: cover
+			position: center center
+			repeat: no-repeat
+		@media (max-width : $bpExtraExtraLarge)
+			bottom: 30px
+		@media (max-width : $bpSmall)
+			bottom: 60px
+	&__title
+		position: absolute
+		left: 60px
+		right: 0
+		bottom: 0
+		font-size: 12px
+		text-transform: uppercase
+		line-height: 20px
+		height: 20px
+		text-align: right
+		text-overflow: ellipsis
+		white-space: nowrap
+		overflow: hidden
+		display: none
+		@media (max-width : $bpExtraExtraLarge)
+			left: 0
+			font-size: 10px
+			line-height: 15px
+			height: 15px
+		@media (max-width : $bpLarge)
+			text-align: left
+			left: 50px
+			right: 50px
+		@media (max-width : $bpSmall)
+			white-space: normal
+			height: 45px
+
+.img-slider
+	position: absolute
+	top: 100%
+	left: 0
+	right: 0
+	bottom: 0
+	z-index: 999
+	width: 100%
+	height: 100%
+	background-color: $colorBlack
+	transition: top .5s
+	@media (max-width : $bpLarge)
+		display: none
+
+	.slick-slide > div
+		height: 100%
+	&_active
+		top: 0
+	.content__nav-btn
+		position: absolute
+
+	&__list
+		position: absolute !important
+		top: 150px
+		left: 90px
+		right: 150px
+		bottom: 150px
+		@media (max-width : $bpSpecialLarge)
+			top: 120px
+			left: 64px
+			right: 104px
+			bottom: 120px
+		@media (max-width : $bpExtraExtraLarge)
+			top: 150px
+			left: 40px
+			right: 40px
+			bottom: 150px
+		.slick-list
+			height: 100%
+	&__item
+		display: inline-block
+		vertical-align: top
+		height: 100%
+		margin-left: 80px
+		opacity: .3
+		transition: opacity .5s
+		position: relative
+		@media (max-width : $bpExtraExtraLarge)
+			margin-left: 40px
+	.slick-current
+		.img-slider__item
+			opacity: 1
+	&__img
+		display: block
+		height: 100%
+	&__title
+		opacity: 0
+		position: absolute
+		left: 0
+		right: 0
+		bottom: 30px
+		font-size: 12px
+		text-transform: uppercase
+		line-height: 45px
+		height: 45px
+		background-color: rgba($colorWhite, .95)
+		padding: 0 60px
+		text-overflow: ellipsis
+		white-space: nowrap
+		overflow: hidden
+		transition: opacity .5s
+		@media (max-width : $bpExtraExtraLarge)
+			left: 0
+			bottom: 20px
+			font-size: 10px
+			line-height: 30px
+			height: 30px
+			padding: 0 40px
+	&__nav-btn
+		@media (max-width : $bpExtraLarge)
+			display: block
+	&__nav
+		position: absolute
+		top: 50%
+		left: 50%
+		margin:
+			top: -80px
+			left: -16px
+		@media (max-width : $bpExtraExtraLarge)
+			margin-left: -12px
+		.slick-arrow
+			margin: 16px 0
+	&__close
+		position: relative
+		transition: opacity .3s
+		&::before,
+		&::after
+			content: ''
+			position: absolute
+			top: 50%
+			left: 50%
+			width: 14px
+			height: 2px
+			margin: -1px -7px
+			background-color: $colorWhite
+			@media (max-width : $bpExtraExtraLarge)
+				width: 10px
+				margin: -1px -5px
+		&::before
+			transform: rotate(45deg)
+		&::after
+			transform: rotate(-45deg)
+		@media (hover: hover)
+			&:hover
+				opacity: .5
+.slick-current
+	.img-slider
+		&__title
+			opacity: 1
+
+.review-slider
+	@media (max-width : $bpLarge)
+		position: relative
+		height: auto
+		padding: 0 25px 81px 25px
+
+	&__nav
+		@media (max-width : $bpExtraLarge)
+			bottom: 0
+		@media (max-width : $bpLarge)
+			left: 25px
+			bottom: 25px
+
+	&__list
+		@media (max-width : $bpExtraExtraLarge)
+			border-right: 1px solid $colorWhite
+			padding-right: 30px
+		@media (max-width : $bpLarge)
+			position: relative !important
+			border: none
+			padding: 0
+	&__item
+		@media (max-width : $bpLarge)
+			height: auto
+	&__header
+		height: 90px
+		position: relative
+		margin-bottom: 25px
+		padding-left: 115px
+		@media (max-width : $bpSpecialLarge)
+			height: 50px
+			margin-bottom: 15px
+			padding-left: 65px
+		@media (max-width : $bpExtraExtraLarge)
+			margin-bottom: 10px
+	&__userpic
+		position: absolute
+		top: 0
+		left: 0
+		width: 90px
+		height: 90px
+		background:
+			size: cover
+			repeat: no-repeat
+			position: center center
+		border-radius: 4px
+		@media (max-width : $bpExtraExtraLarge)
+			width: 50px
+			height: 50px
+	&__name
+		font-size: 18px
+		line-height: 28px
+		letter-spacing: 1.5px
+		text-transform: uppercase
+		margin-bottom: 15px
+		@media (max-width : $bpExtraExtraLarge)
+			font-size: 10px
+			line-height: 16px
+			margin-bottom: 5px
+	&__geo
+		font-size: 12px
+		line-height: 18px
+		letter-spacing: 1px
+		text-transform: uppercase
+		@media (max-width : $bpExtraExtraLarge)
+			font-size: 8px
+			line-height: 16px
+	&__text
+		font-size: 14px
+		line-height: 20px
+		opacity: .5
+		letter-spacing: 1px
+		@media (max-width : $bpExtraExtraLarge)
+			font-size: 11px
+			line-height: 18px
+			letter-spacing: .5px
+		@media (max-width : $bpExtraLarge)
+			line-height: 16px

@@ -1,0 +1,108 @@
+.ambassadors
+
+	&__title
+		display: block
+		text-transform: uppercase
+		text-align: center
+		background:
+			image: url("../img/ambassadors.svg?v=1")
+			position: center center
+			size: contain
+			repeat: no-repeat
+		margin-bottom: 32px
+		padding-top: 7.77%
+		@media (max-width : $bpExtraExtraLarge)
+			margin-bottom: 24px
+		@media (max-width : $bpLarge)
+			margin-bottom: 0
+
+	&__item
+		margin-top: 64px
+		@media (max-width : $bpExtraExtraLarge)
+			margin-top: 48px
+		@media (max-width : $bpLarge)
+			margin-top: 32px
+	&__avatar
+		display: block
+	&__img
+		border-radius: 12px
+		display: block
+		padding-top: 100%
+		background:
+			position: center center
+			size: cover
+			repeat: no-repeat
+			color: $colorGreyLight
+	&__name
+		text-transform: uppercase
+		margin-top: 16px
+	&__city
+		opacity: .6
+
+
+.ambassador
+
+	&__img
+		border-radius: 12px
+		display: block
+		width: 100%
+		padding-top: 100%
+		background:
+			position: center center
+			size: cover
+			repeat: no-repeat
+			color: $colorGreyLight
+	&__name
+		@media (max-width : $bpMedium)
+			margin-top: 48px
+	&__city
+		margin-top: 8px
+		opacity: .6
+	&__text
+		margin-top: 48px
+		@media (max-width : $bpLarge)
+			margin-top: 32px
+
+.ambassador-nav
+	text-align: center
+	margin: 56px 0
+	font-size: 0
+	@media (max-width : $bpLarge)
+		margin: 40px 0
+	&__item
+		width: 112px
+		height: 96px
+		display: inline-block
+		vertical-align: top
+		padding: 0 8px
+		&.swiper-slide-active
+			opacity: .5
+	&__img
+		cursor: pointer
+		display: block
+		width: 100%
+		height: 100%
+		border-radius: 4px
+		background:
+			position: center center
+			size: cover
+			repeat: no-repeat
+			color: $colorGreyLight
+	&__prev,
+	&__next
+		display: inline-block
+		vertical-align: middle
+		width: 26px
+		height: 26px
+		border: 2px solid rgba($colorBlack, .8)
+		svg
+			height: 100%
+	&__prev
+		margin-right: 32px
+		@media (max-width : $bpMedium)
+			margin-right: 8px
+	&__next
+		margin-left: 32px
+		transform: rotate(180deg)
+		@media (max-width : $bpMedium)
+			margin-left: 8px
